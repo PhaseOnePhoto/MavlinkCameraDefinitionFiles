@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mavlinkcamera>
-    <definition version="23">
+    <definition version="24">
         <model>iXM-GS120</model>
         <vendor>PhaseOne</vendor>
     </definition>
@@ -422,24 +422,33 @@
         <parameter name="AF_MAX_DIST" type="float" default="0.0">
             <description>Auto Focus Max Distance [m]</description>
         </parameter>
-        <parameter name="FOCUS_BRACKET" type="uint8" default="1">
+        <parameter name="FOCUS_BRACKET" type="uint8" default="0">
             <description>Focus Bracketing</description>
             <options>
                 <option name="Disable" value="0">
                     <exclusions>
+                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_COUNT</exclude>
                         <exclude>FOCUS_BKT_STEP</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
+                        <exclude>FOCUS_BKT_COC</exclude>
+                        <exclude>FOCUS_BKT_OVRLP</exclude>
+                        <exclude>FOCUS_BKT_DEPTH</exclude>
                     </exclusions>
                 </option>
-                <option name="Enable"  value="1" />
+                <option name="Manual"  value="1">
+                    <exclusions>
+                        <exclude>FOCUS_BKT_COC</exclude>
+                        <exclude>FOCUS_BKT_OVRLP</exclude>
+                        <exclude>FOCUS_BKT_DEPTH</exclude>
+                    </exclusions>
+                </option>
+                <option name="Auto"  value="2">
+                    <exclusions>
+                        <exclude>FOCUS_BKT_COUNT</exclude>
+                        <exclude>FOCUS_BKT_STEP</exclude>
+                    </exclusions>
+                </option>
             </options>
-        </parameter>
-        <parameter name="FOCUS_BKT_COUNT" type="uint32" default="5">
-            <description> - Bracketing Capture Count</description>
-        </parameter>
-        <parameter name="FOCUS_BKT_STEP" type="uint32" default="20">
-            <description> - Bracketing Step</description>
         </parameter>
         <parameter name="FOCUS_BKT_MODE" type="uint8" default="1">
             <description> - Bracketing Mode</description>
@@ -448,6 +457,21 @@
                 <option name="In Front Focus Point" value="1" />
                 <option name="Behind Focus Point"   value="2" />
             </options>
+        </parameter>
+        <parameter name="FOCUS_BKT_COUNT" type="uint32" default="5">
+            <description> - Bracketing Capture Count</description>
+        </parameter>
+        <parameter name="FOCUS_BKT_STEP" type="uint32" default="20">
+            <description> - Bracketing Step</description>
+        </parameter>
+        <parameter name="FOCUS_BKT_COC" type="uint32" default="3">
+            <description> - CoC [pixels]</description>
+        </parameter>
+        <parameter name="FOCUS_BKT_OVRLP" type="uint32" default="20">
+            <description> - Overlap Between Images [%]</description>
+        </parameter>
+        <parameter name="FOCUS_BKT_DEPTH" type="float" default="10">
+            <description> - Object Depth [m]</description>
         </parameter>
         <parameter name="WHITE_BALANCE" type="uint8" default="1">
             <description>White Balance</description>
