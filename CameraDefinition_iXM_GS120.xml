@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mavlinkcamera>
-    <definition version="22">
+    <definition version="23">
         <model>iXM-GS120</model>
         <vendor>PhaseOne</vendor>
     </definition>
@@ -447,6 +447,20 @@
                 <option name="Around Focus Point"   value="0" />
                 <option name="In Front Focus Point" value="1" />
                 <option name="Behind Focus Point"   value="2" />
+            </options>
+        </parameter>
+        <parameter name="WHITE_BALANCE" type="uint8" default="1">
+            <description>White Balance</description>
+            <options>
+                <option name="Auto"        value="0" />
+                <option name="Daylight"    value="1" />
+                <option name="Fluorescent" value="2" />
+                <option name="Tungsten"    value="3" />
+                <option name="Flash"       value="4" />
+                <option name="Custom1"     value="5" />
+                <option name="Custom2"     value="6" />
+                <option name="Custom3"     value="7" />
+                <option name="Aerial"      value="8" />
             </options>
         </parameter>
         <parameter name="HDMI_LV" type="uint8" default="1">
