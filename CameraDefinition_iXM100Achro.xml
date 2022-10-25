@@ -497,12 +497,20 @@
                 <option name="Follow"  value="2" />
             </options>
         </parameter>
-        <parameter name="GMB_RECENTER" type="uint8" default="0">
-            <description>Gimbal Recenter</description>
+        <parameter name="GMB_RESET_MODE" type="uint8" default="0">
+            <description>Gimbal Reset Mode</description>
             <options>
                 <option name="None" value="0" />
-                <option name="Yaw and Pitch" value="3" />
+                <option name="Pitch and Yaw" value="3" />
+                <option name="Factory Settings" value="13" />
                 <option name="Reboot" value="255" />
+            </options>
+        </parameter>
+        <parameter name="GMB_CRTL_MODE" type="uint8" default="0">
+            <description>Gimbal Control Mode</description>
+            <options>
+                <option name="Angle" value="0" />
+                <option name="Rate" value="1" />
             </options>
         </parameter>
         <parameter name="LEVER_ARM_FRONT" type="float" default="0.0">
