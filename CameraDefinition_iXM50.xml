@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mavlinkcamera>
-    <definition version="16">
+    <definition version="22">
         <model>iXM-50</model>
         <vendor>PhaseOne</vendor>
     </definition>
@@ -322,13 +322,25 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Distance Interval" value="1">
+                <option name="Horiontal Distance Interval" value="1">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Time Interval" value="2">
+                <option name="Vertical Distance Interval" value="2">
+                    <exclusions>
+                        <exclude>TIME_INTERVAL</exclude>
+                        <exclude>CAPTURE_COUNT</exclude>
+                    </exclusions>
+                </option>
+                <option name="3D Distance Interval" value="3">
+                    <exclusions>
+                        <exclude>TIME_INTERVAL</exclude>
+                        <exclude>CAPTURE_COUNT</exclude>
+                    </exclusions>
+                </option>
+                <option name="Time Interval" value="4">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>CAPTURE_COUNT</exclude>
