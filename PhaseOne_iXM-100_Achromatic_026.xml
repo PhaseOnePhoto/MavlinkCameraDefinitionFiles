@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mavlinkcamera>
-    <definition version="24">
+    <definition version="26">
         <model>iXM-100 Achromatic</model>
         <vendor>PhaseOne</vendor>
     </definition>
