@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<options>
+    <option name="-3.0" value="-3.0" />
+    <option name="-2.7" value="-2.67" />
+    <option name="-2.3" value="-2.33" />
+    <option name="-2.0" value="-2.0" />
+    <option name="-1.7" value="-1.67" />
+    <option name="-1.3" value="-1.33" />
+    <option name="-1.0" value="-1.0" />
+    <option name="-0.7" value="-0.67" />
+    <option name="-0.3" value="-0.33" />
+    <option name="0"    value="0.0" />
+    <option name="+0.3" value="0.33" />
+    <option name="+0.7" value="0.67" />
+    <option name="+1.0" value="1.0" />
+    <option name="+1.3" value="1.33" />
+    <option name="+1.7" value="1.67" />
+    <option name="+2.0" value="2.0" />
+    <option name="+2.3" value="2.33" />
+    <option name="+2.7" value="2.67" />
+    <option name="+3.0" value="3.0" />
+</options>
