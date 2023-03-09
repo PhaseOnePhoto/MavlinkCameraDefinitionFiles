@@ -185,6 +185,9 @@ def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
 
     copy_options(template, 'CAM_EV', exposure_value)
 
+    remove_exclude(template, 'CAM_EXPMODE', 'Manual', 'SHUTTER_MODE')
+    remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
+
     write_file(template, version, model, vendor)
 
 if __name__ == '__main__':

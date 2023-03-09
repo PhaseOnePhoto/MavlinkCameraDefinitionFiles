@@ -43,7 +43,12 @@ def get_options(filename : str):
 
 def remove_option(template : ElementTree, parameter : str, option : str):
     e1 = template.find(f'./parameters/parameter[@name="{parameter}"]/options')
-    e2 = template.find(f'./parameters/parameter[@name="{parameter}"]/options/option[@name="{option}"]')
+    e2 = e1.find(f'./option[@name="{option}"]')
+    e1.remove(e2)
+
+def remove_exclude(template : ElementTree, parameter : str, option : str, exclude : str):
+    e1 = template.find(f'./parameters/parameter[@name="{parameter}"]/options/option[@name="{option}"]/exclusions')
+    e2 = e1.find(f'./exclude[.="{exclude}"]')
     e1.remove(e2)
 
 def write_file(template : ElementTree, version : str, model : str, vendor : str):
