@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mavlinkcamera>
-    <definition version="26">
-        <model>iXM-GS120</model>
+    <definition version="27">
+        <model>iXM-100_Achromatic</model>
         <vendor>PhaseOne</vendor>
     </definition>
     <parameters>
@@ -11,6 +11,7 @@
                 <option name="Manual" value="0">
                     <exclusions>
                         <exclude>CAM_EV</exclude>
+                        <exclude>SHUTTER_MODE</exclude>
                     </exclusions>
                 </option>
                 <option name="Auto" value="1">
@@ -18,6 +19,7 @@
                         <exclude>CAM_ISO</exclude>
                         <exclude>CAM_APERTURE</exclude>
                         <exclude>CAM_SHUTTERSPD</exclude>
+                        <exclude>SHUTTER_MODE</exclude>
                     </exclusions>
                 </option>
             </options>
@@ -48,6 +50,12 @@
                 <option name="4000" value="4000" />
                 <option name="5000" value="5000" />
                 <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="CAM_APERTURE" type="float" default="5.6">
@@ -71,14 +79,6 @@
         <parameter name="CAM_SHUTTERSPD" type="int32" default="1000">
             <description>Shutter Speed</description>
             <options>
-                <option name="1/16000" value="16000" />
-                <option name="1/13000" value="13000" />
-                <option name="1/10000" value="10000" />
-                <option name="1/8000" value="8000" />
-                <option name="1/6500" value="6500" />
-                <option name="1/5000" value="5000" />
-                <option name="1/4000" value="4000" />
-                <option name="1/3200" value="3200" />
                 <option name="1/2500" value="2500" />
                 <option name="1/2000" value="2000" />
                 <option name="1/1600" value="1600" />
@@ -170,6 +170,12 @@
                 <option name="4000" value="4000" />
                 <option name="5000" value="5000" />
                 <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="AE_ISO_MAX" type="uint32" default="800">
@@ -191,19 +197,17 @@
                 <option name="4000" value="4000" />
                 <option name="5000" value="5000" />
                 <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="AE_SH_SPD_MIN" type="int32" default="1000">
             <description>AE Shutter Speed Min</description>
             <options>
-                <option name="1/16000" value="16000" />
-                <option name="1/13000" value="13000" />
-                <option name="1/10000" value="10000" />
-                <option name="1/8000" value="8000" />
-                <option name="1/6500" value="6500" />
-                <option name="1/5000" value="5000" />
-                <option name="1/4000" value="4000" />
-                <option name="1/3200" value="3200" />
                 <option name="1/2500" value="2500" />
                 <option name="1/2000" value="2000" />
                 <option name="1/1600" value="1600" />
@@ -244,14 +248,6 @@
         <parameter name="AE_SH_SPD_MAX" type="int32" default="2500">
             <description>AE Shutter Speed Max</description>
             <options>
-                <option name="1/16000" value="16000" />
-                <option name="1/13000" value="13000" />
-                <option name="1/10000" value="10000" />
-                <option name="1/8000" value="8000" />
-                <option name="1/6500" value="6500" />
-                <option name="1/5000" value="5000" />
-                <option name="1/4000" value="4000" />
-                <option name="1/3200" value="3200" />
                 <option name="1/2500" value="2500" />
                 <option name="1/2000" value="2000" />
                 <option name="1/1600" value="1600" />
@@ -452,18 +448,6 @@
                         <exclude>FOCUS_BKT_CNT</exclude>
                         <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>CAPTURE_COUNT</exclude>
-                    </exclusions>
-                </option>
-                <option name="Burst Mode" value="7">
-                    <exclusions>
-                        <exclude>DIST_INTERVAL</exclude>
-                        <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
-                        <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
-                        <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
-                        <exclude>FOCUS_BKT_DEPTH</exclude>
                     </exclusions>
                 </option>
             </options>

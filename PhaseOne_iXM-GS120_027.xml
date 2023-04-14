@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mavlinkcamera>
-    <definition version="26">
+    <definition version="27">
         <model>iXM-GS120</model>
         <vendor>PhaseOne</vendor>
     </definition>

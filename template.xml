@@ -41,7 +41,7 @@
             <options>
             </options>
         </parameter>
-        <parameter name="CAM_SHUTTERSPD" type="float" default="0.001">
+        <parameter name="CAM_SHUTTERSPD" type="int32" default="1000">
             <description>Shutter Speed</description>
             <options>
             </options>
@@ -72,12 +72,12 @@
             <options>
             </options>
         </parameter>
-        <parameter name="AE_SH_SPD_MIN" type="float" default="0.001">
+        <parameter name="AE_SH_SPD_MIN" type="int32" default="1000">
             <description>AE Shutter Speed Min</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_SH_SPD_MAX" type="float" default="0.0004">
+        <parameter name="AE_SH_SPD_MAX" type="int32" default="2500">
             <description>AE Shutter Speed Max</description>
             <options>
             </options>

@@ -30,7 +30,7 @@ from utilities import *
 
 
 def main():
-    version = '26'
+    version = '27'
 
     build_ixm_50(version)
     build_ixm_100(version)
@@ -61,7 +61,7 @@ def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
 
     options_shutter_speed = get_options('options_shutter_speed.xml')
 
-    limit_options(options_shutter_speed, 0.0004, 1.0)
+    limit_options(options_shutter_speed, -1000, 2500)
 
     copy_options(template, 'CAM_SHUTTERSPD', options_shutter_speed)
     copy_options(template, 'AE_SH_SPD_MIN', options_shutter_speed)
@@ -99,7 +99,7 @@ def build_ixm_100(version='26', model='iXM-100', vendor='PhaseOne'):
 
     options_shutter_speed = get_options('options_shutter_speed.xml')
 
-    limit_options(options_shutter_speed, 0.0004, 1.0)
+    limit_options(options_shutter_speed, -1000, 2500)
 
     copy_options(template, 'CAM_SHUTTERSPD', options_shutter_speed)
     copy_options(template, 'AE_SH_SPD_MIN', options_shutter_speed)
@@ -137,7 +137,7 @@ def build_ixm_100_achromatic(version='26', model='iXM-100_Achromatic', vendor='P
 
     options_shutter_speed = get_options('options_shutter_speed.xml')
 
-    limit_options(options_shutter_speed, 0.0004, 1.0)
+    limit_options(options_shutter_speed, -1000, 2500)
 
     copy_options(template, 'CAM_SHUTTERSPD', options_shutter_speed)
     copy_options(template, 'AE_SH_SPD_MIN', options_shutter_speed)
@@ -175,7 +175,7 @@ def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
 
     options_shutter_speed = get_options('options_shutter_speed.xml')
 
-    limit_options(options_shutter_speed, 0.0000625, 1.0)
+    limit_options(options_shutter_speed, -1000, 16000)
 
     copy_options(template, 'CAM_SHUTTERSPD', options_shutter_speed)
     copy_options(template, 'AE_SH_SPD_MIN', options_shutter_speed)
