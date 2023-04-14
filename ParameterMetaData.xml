@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Params>
+  <ArduCopter2>
+    <CAM_EXPMODE>
+      <DisplayName>Exposure Mode</DisplayName>
+      <Description>Exposure Mode</Description>
+      <Values>0:Manual,
+1:Auto</Values>
+      <User>Standard</User>
+    </CAM_EXPMODE>
+    <CAM_ISO>
+      <DisplayName>Camera ISO</DisplayName>
+      <Description>Light Sensitivity</Description>
+      <Values>50:ISO 50,
+64: ISO 64,
+80: ISO 80,
+100: ISO 100,
+125: ISO 125,
+160: ISO 160,
+200: ISO 200,
+250: ISO 250,
+320: ISO 320,
+400: ISO 400,
+500: ISO 500,
+640: ISO 640,
+800: ISO 800,
+1000: ISO 1000,
+1250: ISO 1250,
+1600: ISO 1600,
+2000: ISO 2000,
+2500: ISO 2500,
+3200: ISO 3200,
+4000: ISO 4000,
+5000: ISO 5000,
+6400: ISO 6400</Values>
+      <User>Standard</User>
+    </CAM_ISO>
+    <CAM_APERTURE>
+      <DisplayName>Camera Aperture</DisplayName>
+      <Description>F-stop value representing the aperture.</Description>
+      <Values>5.6: f5.6,
+6.3: f6.3,
+7.1: f7.1,
+8.0: f8,
+9.0: f9,
+10.0: f10,
+11.0: f11,
+12.0: f12,
+14.0: f14,
+16.0: f16,
+18.0: f18,
+20.0: f20,
+22.0: f22</Values>
+      <User>Standard</User>
+    </CAM_APERTURE>
+    <CAM_SHUTTERSPD>
+      <DisplayName>Shutter Speed</DisplayName>
+      <Description>Shutter Speed</Description>
+      <Values>0.0004: 1/2500,
+0.0005: 1/2000,
+0.000625: 1/1600,
+0.0008: 1/1250,
+0.001: 1/1000,
+0.00125: 1/800,
+0.0015625: 1/640,
+0.002: 1/500,
+0.0025: 1/400,
+0.003125: 1/320,
+0.004: 1/250,
+0.005: 1/200,
+0.00625: 1/160,
+0.008: 1/125,
+0.01: 1/100,
+0.0125: 1/80,
+0.015625: 1/60,
+0.02: 1/50,
+0.025: 1/40,
+0.03125: 1/30,
+0.04: 1/25,
+0.05: 1/20,
+0.0625: 1/15,
+0.08: 1/13,
+0.1: 1/10,
+0.125: 1/8,
+0.15625: 1/6,
+0.2: 1/5,
+0.25: 1/4,
+0.3125: 1/3,
+0.4: 0.4s,
+0.5: 0.5s,
+0.625: 0.6s,
+0.8: 0.8s,
+1.0: 1s</Values>
+      <User>Standard</User>
+    </CAM_SHUTTERSPD>
+    <CAM_EV>
+      <DisplayName>Exposure Compensation</DisplayName>
+      <Description>Exposure Compensation</Description>
+      <Values>-3.0: -3.0,
+-2.67: -2.7,
+-2.33: -2.3,
+-2.0: -2.0,
+-1.67: -1.7,
+-1.33: -1.3,
+-1.0: -1.0,
+-0.67: -0.7,
+-0.33: -0.3,
+0.0: 0,
+0.33: +0.3,
+0.67: +0.7,
+1.0: +1.0,
+1.33: +1.3,
+1.67: +1.7,
+2.0: +2.0,
+2.33: +2.3,
+2.67: +2.7,
+3.0: +3.0</Values>
+      <User>Standard</User>
+    </CAM_EV>
+    <SHUTTER_MODE>
+      <DisplayName>Shutter Mode</DisplayName>
+      <Description>Shutter Mode</Description>
+      <Values>0: Leaf Shutter,
+1: Electronic Shutter</Values>
+      <User>Standard</User>
+    </SHUTTER_MODE>
+    <AE_PRIORITY>
+      <DisplayName>Auto Exposure Priority</DisplayName>
+      <Description>Auto Exposure Priority</Description>
+      <Values>0:ISO/Aperture/Shutter
+1:ISO/Shutter/Aperture
+2:Aperture/ISO/Shutter
+3:Aperture/Shutter/ISO
+4:Shutter/Aperture/ISO
+5:Shutter/ISO/Aperture</Values>
+      <User>Standard</User>
+    </AE_PRIORITY>
+    <AE_ISO_MIN>
+      <DisplayName>Auto Exposure Min ISO</DisplayName>
+      <Description>Auto Exposure Min ISO</Description>
+      <Range>50 6400</Range>
+      <User>Standard</User>
+    </AE_ISO_MIN>
+    <AE_ISO_MAX>
+      <DisplayName>Auto Exposure Max ISO</DisplayName>
+      <Description>Auto Exposure Max ISO</Description>
+      <Range>50 6400</Range>
+      <User>Standard</User>
+    </AE_ISO_MAX>
+    <AE_SH_SPD_MIN>
+      <DisplayName>Auto Exposure Min Shutter Speed</DisplayName>
+      <Description>Auto Exposure Min Shutter Speed</Description>
+      <Range>0.0005 1.0</Range>
+      <User>Standard</User>
+    </AE_SH_SPD_MIN>
+    <AE_SH_SPD_MAX>
+      <DisplayName>Auto Exposure Max Shutter Speed</DisplayName>
+      <Description>Auto Exposure Max Shutter Speed</Description>
+      <Range>0.0005 1.0</Range>
+      <User>Standard</User>
+    </AE_SH_SPD_MAX>
+    <AE_APERTURE_MIN>
+      <DisplayName>Auto Exposure Min Camera Aperture</DisplayName>
+      <Description>Auto Exposure Min Camera Aperture</Description>
+      <Range>5.6 22.0</Range>
+      <User>Standard</User>
+    </AE_APERTURE_MIN>
+    <AE_APERTURE_MAX>
+      <DisplayName>Auto Exposure Max Camera Aperture</DisplayName>
+      <Description>Auto Exposure Max Camera Aperture</Description>
+      <Range>5.6 22.0</Range>
+      <User>Standard</User>
+    </AE_APERTURE_MAX>
+    <CAPTURE_MODE>
+      <DisplayName>Capture Mode</DisplayName>
+      <Description>Capture Mode</Description>
+      <Values>0: Off,
+1: Horizontal Distance,
+2: Vertical Distance,
+3: 3D Distance,
+4: Time Interval</Values>
+      <User>Standard</User>
+    </CAPTURE_MODE>
+    <DIST_INTERVAL>
+      <DisplayName>Distance Interval for Auto Capture [m]</DisplayName>
+      <Description>Distance Interval for Auto Capture [m]</Description>
+      <Range>0 1000</Range>
+      <User>Standard</User>
+    </DIST_INTERVAL>
+    <TIME_INTERVAL>
+      <DisplayName>Time Interval for Auto Capture [s]</DisplayName>
+      <Description>Time Interval for Auto Capture [s]</Description>
+      <Range>0 3600</Range>
+      <User>Standard</User>
+    </TIME_INTERVAL>
+    <CAPTURE_COUNT>
+      <DisplayName>Capture Count for Burst Mode</DisplayName>
+      <Description>Capture Count for Burst Mode</Description>
+      <Range>0 10</Range>
+      <User>Standard</User>
+    </CAPTURE_COUNT>
+    <FOCUS_MODE>
+      <DisplayName>Focus mode</DisplayName>
+      <Description>Focus mode</Description>
+      <Values>0: Manual,
+1: Auto</Values>
+      <User>Standard</User>
+    </FOCUS_MODE>
+    <FOCUS_DIST>
+      <DisplayName>Focus distance</DisplayName>
+      <Description>Focus distance</Description>
+      <Range>3 180</Range>
+      <User>Standard</User>
+    </FOCUS_DIST>
+    <AF_MIN_DIST>
+      <DisplayName>Auto Focus Min Distance</DisplayName>
+      <Description>Auto Focus Min Distance</Description>
+      <Range>3 180</Range>
+      <User>Standard</User>
+    </AF_MIN_DIST>
+    <AF_MAX_DIST>
+      <DisplayName>Auto Focus Max Distance</DisplayName>
+      <Description>Auto Focus Max Distance</Description>
+      <Range>3 180</Range>
+      <User>Standard</User>
+    </AF_MAX_DIST>
+    <AF_STRATEGY>
+      <DisplayName>Focus Limit Control</DisplayName>
+      <Description>Focus Limit Control</Description>
+      <Values>0: Clip Distance,
+1: Gate Distance,
+2: Relative Distance</Values>
+      <User>Standard</User>
+    </AF_STRATEGY>
+    <AF_STRATEGY_THR>
+      <DisplayName>Threshold for Relative Distance [m]</DisplayName>
+      <Description>Threshold for Relative Distance [m]</Description>
+      <Range>0 180</Range>
+      <User>Standard</User>
+    </AF_STRATEGY_THR>
+    <FOCUS_BRACKET>
+      <DisplayName>Focus Bracketing</DisplayName>
+      <Description>Focus Bracketing</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </FOCUS_BRACKET>
+    <FOCUS_BKT_MODE>
+      <DisplayName>Focus Bracketing Mode</DisplayName>
+      <Description>Focus Bracketing Mode</Description>
+      <Values>0: Around focus point,
+1: In front of focus point,
+2: Behind focus point</Values>
+      <User>Standard</User>
+    </FOCUS_BKT_MODE>
+    <FOCUS_BKT_COUNT>
+      <DisplayName>Focus Bracketing Capture Count</DisplayName>
+      <Description>Focus Bracketing Capture Count</Description>
+      <Range>1 100</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_BKT_COUNT>
+    <FOCUS_BKT_STEP>
+      <DisplayName>Focus Bracketing Motor Step Count</DisplayName>
+      <Description>Focus Bracketing Motor Step Count</Description>
+      <Range>1 100</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_BKT_STEP>
+    <FOCUS_BKT_COC>
+      <DisplayName>Focus Bracketing Circle of Confusion</DisplayName>
+      <Description>Focus Bracketing Circle of Confusion</Description>
+      <Range>1 100</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_BKT_COC>
+    <FOCUS_BKT_OVRLP>
+      <DisplayName>Focus Bracketing Overlap</DisplayName>
+      <Description>Focus Bracketing Overlap</Description>
+      <Range>1 100</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_BKT_OVRLP>
+    <FOCUS_BKT_DEPTH>
+      <DisplayName>Focus Bracketing Depth</DisplayName>
+      <Description>Focus Bracketing Depth</Description>
+      <Range>1 100</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_BKT_DEPTH>
+    <WHITE_BALANCE>
+      <DisplayName>White Balance</DisplayName>
+      <Description>White Balance</Description>
+      <Values>0: Auto,
+1: Daylight,
+2: Fluorescent,
+3: Tungsten,
+4: Flash,
+5: Custom1,
+6: Custom2,
+7: Custom3,
+8: Aerial</Values>
+      <User>Standard</User>
+    </WHITE_BALANCE>
+    <HDMI_LV>
+      <DisplayName>HDMI Live View</DisplayName>
+      <Description>HDMI Live View</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </HDMI_LV>
+    <HDMI_OVERLAY>
+      <DisplayName>HDMI Overlay</DisplayName>
+      <Description>HDMI Overlay</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </HDMI_OVERLAY>
+    <OVERLAY_TRANSP>
+      <DisplayName>Overlay Transparency</DisplayName>
+      <Description>Overlay Transparency</Description>
+      <Range>1 255</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </OVERLAY_TRANSP>
+    <FOCUS_POINT>
+      <DisplayName>Overlay Focus Point</DisplayName>
+      <Description>Overlay Focus Point</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </FOCUS_POINT>
+    <OVERLAY_PREVIEW>
+      <DisplayName>Overlay Preview</DisplayName>
+      <Description>Overlay Preview</Description>
+      <Values>0: Off,
+1: Small,
+4: Large</Values>
+      <User>Standard</User>
+    </OVERLAY_PREVIEW>
+    <PREVIEW_TIME>
+      <DisplayName>Overlay Preview Time</DisplayName>
+      <Description>Overlay Preview Time</Description>
+      <Values>0: No Timeout,
+2000: 2s,
+4000: 4s,
+6000: 6s,
+10000: 10s,
+15000: 15s,
+30000: 30s</Values>
+      <User>Standard</User>
+    </PREVIEW_TIME>
+    <FOCUS_MASK>
+      <DisplayName>Focus Mask</DisplayName>
+      <Description>Focus Mask</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </FOCUS_MASK>
+    <FOCUS_MASK_THR>
+      <DisplayName>Focus Mask Threshold</DisplayName>
+      <Description>Focus Mask Threshold</Description>
+      <Range>1 1000</Range>
+      <Increment>1</Increment>
+      <User>Standard</User>
+    </FOCUS_MASK_THR>
+    <LEVER_ARM_FRONT>
+      <DisplayName>Camera Lever Arm Front</DisplayName>
+      <Description>X coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <User>Standard</User>
+    </LEVER_ARM_FRONT>
+    <LEVER_ARM_RIGHT>
+      <DisplayName>Camera Lever Arm Right</DisplayName>
+      <Description>Y coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <User>Standard</User>
+    </LEVER_ARM_RIGHT>
+    <LEVER_ARM_UP>
+      <DisplayName>Camera Lever Arm Up</DisplayName>
+      <Description>Z coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <User>Standard</User>
+    </LEVER_ARM_UP>
+    <NEW_FOLDER>
+      <DisplayName>New Folder</DisplayName>
+      <Description>Create a new picture folder on the memory card.</Description>
+      <Values>0: None,
+1: Create</Values>
+      <User>Standard</User>
+    </NEW_FOLDER>
+    <STORAGE_FORMAT>
+      <DisplayName>Storage Format</DisplayName>
+      <Description>Format memory card (erasing all data on the memory card).</Description>
+      <Values>0: None,
+1: Format</Values>
+      <User>Standard</User>
+    </STORAGE_FORMAT>
+    <MASS_STORAGE>
+      <DisplayName>Mass Storage</DisplayName>
+      <Description>Let the camera behave as a memory card reader when connected to a computer via USB-C.</Description>
+      <Values>0: Disable,
+1: Enable</Values>
+      <User>Standard</User>
+    </MASS_STORAGE>
+    <CUSTOM_INFO>
+      <DisplayName>Custom Information</DisplayName>
+      <Description>Custom information to be added in the XMP metadata (only 1 character in Mission Planner).</Description>
+      <Range>32 126</Range>
+      <User>Standard</User>
+    </CUSTOM_INFO>
+    <MAV_CAM_COMP_ID>
+      <DisplayName>MAVLink Camera Component ID</DisplayName>
+      <Description>MAVLink Camera Component ID</Description>
+      <Values>100: Camera 1,
+101: Camera 2,
+102: Camera 3,
+103: Camera 4,
+104: Camera 5,
+105: Camera 6</Values>
+      <User>Standard</User>
+    </MAV_CAM_COMP_ID>
+    <MAV_GMB_COMP_ID>
+      <DisplayName>MAVLink Gimbal Component ID</DisplayName>
+      <Description>MAVLink Gimbal Component ID</Description>
+      <Values>154: Gimbal 1,
+171: Gimbal 2,
+172: Gimbal 3,
+173: Gimbal 4,
+174: Gimbal 5,
+175: Gimbal 6</Values>
+      <User>Standard</User>
+    </MAV_GMB_COMP_ID>
+    <GMB_PARAM_RFRSH>
+      <DisplayName>Refresh Gimbal Parameters</DisplayName>
+      <Description>Refresh cached value of gimbal parameters on camera.</Description>
+      <Values>0: None,
+1: Refresh</Values>
+      <User>Standard</User>
+    </GMB_PARAM_RFRSH>
+    <GMB_PARAM_STAT>
+      <DisplayName>Status of Refreshing Gimbal Parameters</DisplayName>
+      <Description>Status of Refreshing Gimbal Parameters (Read Only)</Description>
+      <User>Standard</User>
+    </GMB_PARAM_STAT>
+    <GMB_PARAM_NUM>
+      <DisplayName>Number of Gimbal Parameters</DisplayName>
+      <Description>Number of Gimbal Parameters (Read Only)</Description>
+      <User>Standard</User>
+    </GMB_PARAM_NUM>
+    <LRF_FORWARD>
+      <DisplayName>Enable Forwarding of Laser Range Finder Measurements</DisplayName>
+      <Description>Enable Forwarding of Laser Range Finder Measurements</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </LRF_FORWARD>
+    <LRF_FREQUENCY>
+      <DisplayName>Frequency of Forwarding Laser Range Finder Measurements</DisplayName>
+      <Description>Frequency of Forwarding Laser Range Finder Measurements</Description>
+      <Values>1: 1 Hz,
+2: 2 Hz,
+4: 4 Hz,
+8: 8 Hz,
+16: 16 Hz</Values>
+      <User>Standard</User>
+    </LRF_FREQUENCY>
+    <LRF_ORIENTATION>
+      <DisplayName>Orientation field of DISTANCE_SENSOR message</DisplayName>
+      <Description>Orientation field of DISTANCE_SENSOR message</Description>
+      <Range>0 40</Range>
+      <User>Standard</User>
+    </LRF_ORIENTATION>
+    <GMB_REBOOT>
+      <DisplayName>Reboot Gimbal</DisplayName>
+      <Description>Reboot Gimbal</Description>
+      <Values>0: None,
+1: Reboot</Values>
+      <User>Standard</User>
+    </GMB_REBOOT>
+    <VERSION_X>
+      <DisplayName>X of Gimbal Firmware Version X.Y.Z</DisplayName>
+      <Description>X of Gimbal Firmware Version X.Y.Z (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </VERSION_X>
+    <VERSION_Y>
+      <DisplayName>Y of Gimbal Firmware Version X.Y.Z</DisplayName>
+      <Description>Y of Gimbal Firmware Version X.Y.Z (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </VERSION_Y>
+    <VERSION_Z>
+      <DisplayName>Z of Gimbal Firmware Version X.Y.Z</DisplayName>
+      <Description>Z of Gimbal Firmware Version X.Y.Z (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </VERSION_Z>
+    <SRL_NUMBER>
+      <DisplayName>Serial Number of Gimbal</DisplayName>
+      <Description>Serial Number of Gimbal (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </SRL_NUMBER>
+    <STIFF_TILT>
+      <DisplayName>Stiffness on Tilt Axis</DisplayName>
+      <Description>Stiffness on Tilt Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </STIFF_TILT>
+    <GAIN_ALL>
+      <DisplayName>Proportional Gain on Pan, Roll and Tilt Axis</DisplayName>
+      <Description>Proportional Gain on Pan, Roll and Tilt Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </GAIN_ALL>
+    <RC_CHAN_STILT>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_STILT>
+    <STIFF_ROLL>
+      <DisplayName>Stiffness on Roll Axis</DisplayName>
+      <Description>Stiffness on Roll Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </STIFF_ROLL>
+    <MT_OFF_ROLL>
+      <DisplayName>Encoder Calibrated Value on Roll Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Roll Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </MT_OFF_ROLL>
+    <FLW_EN_TILT>
+      <DisplayName>Follow Enabled on Tilt Axis</DisplayName>
+      <Description>Follow Enabled on Tilt Axis</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </FLW_EN_TILT>
+    <STIFF_PAN>
+      <DisplayName>Stiffness on Pan Axis</DisplayName>
+      <Description>Stiffness on Pan Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </STIFF_PAN>
+    <FILTER_OUT>
+      <DisplayName>Output Filter</DisplayName>
+      <Description>Output Filter</Description>
+      <Range>0 10</Range>
+      <User>Standard</User>
+    </FILTER_OUT>
+    <RC_CHAN_SPAN>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_SPAN>
+    <PWR_TILT>
+      <DisplayName>Minimum Power on Tilt Axis</DisplayName>
+      <Description>Minimum Power on Tilt Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </PWR_TILT>
+    <PWR_ROLL>
+      <DisplayName>Minimum Power on Roll Axis</DisplayName>
+      <Description>Minimum Power on Roll Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </PWR_ROLL>
+    <PWR_PAN>
+      <DisplayName>Minimum Power on Pan Axis</DisplayName>
+      <Description>Minimum Power on Pan Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </PWR_PAN>
+    <FLW_SP_TILT>
+      <DisplayName>Follow Speed on Tilt Axis</DisplayName>
+      <Description>Follow Speed on Tilt Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_SP_TILT>
+    <GMB_HOME_PAN>
+      <DisplayName>Home Position on Pan Axis</DisplayName>
+      <Description>Home Position on Pan Axis</Description>
+      <Range>-180 180</Range>
+      <User>Standard</User>
+    </GMB_HOME_PAN>
+    <FLW_SP_PAN>
+      <DisplayName>Follow Speed on Pan Axis</DisplayName>
+      <Description>Follow Speed on Pan Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_SP_PAN>
+    <FLW_LPF_TILT>
+      <DisplayName>Follow Low-pass Filter on Tilt Axis</DisplayName>
+      <Description>Follow Low-pass Filter on Tilt Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_LPF_TILT>
+    <MAPPING_ANGLE>
+      <DisplayName>Mapping Angle</DisplayName>
+      <Description>Mapping Angle</Description>
+      <Range>0 90</Range>
+      <User>Standard</User>
+    </MAPPING_ANGLE>
+    <FLW_LPF_PAN>
+      <DisplayName>Follow Low-pass Filter on Pan Axis</DisplayName>
+      <Description>Follow Low-pass Filter on Pan Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_LPF_PAN>
+    <GYRO_TRUST>
+      <DisplayName>Gyro Trust</DisplayName>
+      <Description>Gyro Trust</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </GYRO_TRUST>
+    <RC_DZONE_TILT>
+      <DisplayName>Deadzone on Tilt Commands</DisplayName>
+      <Description>Deadzone on Tilt Commands</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </RC_DZONE_TILT>
+    <RC_DZONE_ROLL>
+      <DisplayName>Deadzone on Roll Commands</DisplayName>
+      <Description>Deadzone on Roll Commands</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </RC_DZONE_ROLL>
+    <RC_DZONE_PAN>
+      <DisplayName>Deadzone on Pan Commands</DisplayName>
+      <Description>Deadzone on Pan Commands</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </RC_DZONE_PAN>
+    <GMB_LIM_PAN>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GMB_LIM_PAN>
+    <PWR_AUTO>
+      <DisplayName>Auto Power</DisplayName>
+      <Description>Auto Power</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </PWR_AUTO>
+    <GMB_INVERTED>
+      <DisplayName>Inverted Mode</DisplayName>
+      <Description>Inverted Mode</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </GMB_INVERTED>
+    <AIR_ENABLE>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </AIR_ENABLE>
+    <RC_TYPE>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_TYPE>
+    <GYRO_LPF>
+      <DisplayName>Gyroscope Low-pass Filter</DisplayName>
+      <Description>Gyroscope Low-pass Filter</Description>
+      <Range>0 10</Range>
+      <User>Standard</User>
+    </GYRO_LPF>
+    <RC_LIM_MIN_TILT>
+      <DisplayName>Min Limit on Tilt Axis</DisplayName>
+      <Description>Min Limit on Tilt Axis</Description>
+      <Range>-90 0</Range>
+      <User>Standard</User>
+    </RC_LIM_MIN_TILT>
+    <RC_LIM_MAX_TILT>
+      <DisplayName>Max Limit on Tilt Axis</DisplayName>
+      <Description>Max Limit on Tilt Axis</Description>
+      <Range>0 90</Range>
+      <User>Standard</User>
+    </RC_LIM_MAX_TILT>
+    <RC_LIM_MIN_ROLL>
+      <DisplayName>Min Limit on Roll Axis</DisplayName>
+      <Description>Min Limit on Roll Axis</Description>
+      <Range>-45 0</Range>
+      <User>Standard</User>
+    </RC_LIM_MIN_ROLL>
+    <RC_LIM_MAX_ROLL>
+      <DisplayName>Max Limit on Roll Axis</DisplayName>
+      <Description>Max Limit on Roll Axis</Description>
+      <Range>0 45</Range>
+      <User>Standard</User>
+    </RC_LIM_MAX_ROLL>
+    <GMB_HOFF_TILT>
+      <DisplayName>Encoder Calibrated Value on Tilt Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Tilt Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GMB_HOFF_TILT>
+    <GMB_HOFF_ROLL>
+      <DisplayName>Encoder Calibrated Value on Roll Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Roll Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GMB_HOFF_ROLL>
+    <RC_LPF_TILT>
+      <DisplayName>Low-pass Filter on Tilt Commands</DisplayName>
+      <Description>Low-pass Filter on Tilt Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_LPF_TILT>
+    <RC_LPF_ROLL>
+      <DisplayName>Low-pass Filter on Roll Commands</DisplayName>
+      <Description>Low-pass Filter on Roll Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_LPF_ROLL>
+    <RC_LPF_PAN>
+      <DisplayName>Low-pass Filter on Pan Commands</DisplayName>
+      <Description>Low-pass Filter on Pan Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_LPF_PAN>
+    <RC_CHAN_TILT>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_TILT>
+    <RC_CHAN_ROLL>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_ROLL>
+    <RC_CHAN_PAN>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_PAN>
+    <RC_CHAN_MODE>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_CHAN_MODE>
+    <ACC_OFFSETX>
+      <DisplayName>Accelerometer Calibrated Value on X-axis</DisplayName>
+      <Description>Accelerometer Calibrated Value on X-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </ACC_OFFSETX>
+    <ACC_OFFSETY>
+      <DisplayName>Accelerometer Calibrated Value on Y-axis</DisplayName>
+      <Description>Accelerometer Calibrated Value on Y-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </ACC_OFFSETY>
+    <ACC_OFFSETZ>
+      <DisplayName>Accelerometer Calibrated Value on Z-axis</DisplayName>
+      <Description>Accelerometer Calibrated Value on Z-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </ACC_OFFSETZ>
+    <GYRO_OFFSETX>
+      <DisplayName>Gyroscope Calibrated Value on X-axis</DisplayName>
+      <Description>Gyroscope Calibrated Value on X-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GYRO_OFFSETX>
+    <GYRO_OFFSETY>
+      <DisplayName>Gyroscope Calibrated Value on Y-axis</DisplayName>
+      <Description>Gyroscope Calibrated Value on Y-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GYRO_OFFSETY>
+    <GYRO_OFFSETZ>
+      <DisplayName>Gyroscope Calibrated Value on Z-axis</DisplayName>
+      <Description>Gyroscope Calibrated Value on Z-axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GYRO_OFFSETZ>
+    <MT_OFF_TILT>
+      <DisplayName>Encoder Calibrated Value on Tilt Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Tilt Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </MT_OFF_TILT>
+    <MAPPING_ENABLE>
+      <DisplayName>Mapping Enable</DisplayName>
+      <Description>Mapping Enable</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </MAPPING_ENABLE>
+    <RC_TRIM_TILT>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_TRIM_TILT>
+    <RC_TRIM_ROLL>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_TRIM_ROLL>
+    <RC_TRIM_PAN>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </RC_TRIM_PAN>
+    <RC_MODE_TILT>
+      <DisplayName>Follow/Lock Mode on Tilt Axis</DisplayName>
+      <Description>Follow/Lock Mode on Tilt Axis</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </RC_MODE_TILT>
+    <RC_MODE_ROLL>
+      <DisplayName>Follow/Lock Mode on Roll Axis</DisplayName>
+      <Description>Follow/Lock Mode on Roll Axis</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </RC_MODE_ROLL>
+    <RC_MODE_PAN>
+      <DisplayName>Follow/Lock Mode on Pan Axis</DisplayName>
+      <Description>Follow/Lock Mode on Pan Axis</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </RC_MODE_PAN>
+    <FLW_WD_TILT>
+      <DisplayName>Follow Window on Tilt Axis</DisplayName>
+      <Description>Follow Window on Tilt Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_WD_TILT>
+    <FLW_WD_PAN>
+      <DisplayName>Follow Windows on Pan Axis</DisplayName>
+      <Description>Follow Windows on Pan Axis</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </FLW_WD_PAN>
+    <MT_OFF_PAN>
+      <DisplayName>Encoder Calibrated Value on Pan Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Pan Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </MT_OFF_PAN>
+    <RC_SPD_TILT>
+      <DisplayName>Speed on Tilt Commands</DisplayName>
+      <Description>Speed on Tilt Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_SPD_TILT>
+    <RC_SPD_ROLL>
+      <DisplayName>Speed on Roll Commands</DisplayName>
+      <Description>Speed on Roll Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_SPD_ROLL>
+    <RC_SPD_PAN>
+      <DisplayName>Speed on Pan Commands</DisplayName>
+      <Description>Speed on Pan Commands</Description>
+      <Range>0 100</Range>
+      <User>Standard</User>
+    </RC_SPD_PAN>
+    <RC_REVERSE_AXIS>
+      <DisplayName>Bitmask for 5 Parameters</DisplayName>
+      <Description>Bitmask for 5 Parameters</Description>
+      <Range>0 31</Range>
+      <User>Standard</User>
+    </RC_REVERSE_AXIS>
+    <AIR_OFF_HOZ>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </AIR_OFF_HOZ>
+    <AIR_OFF_VEL>
+      <DisplayName>Not Used</DisplayName>
+      <Description>Not Used (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </AIR_OFF_VEL>
+    <GMB_HOFF_PAN>
+      <DisplayName>Encoder Calibrated Value on Pan Axis</DisplayName>
+      <Description>Encoder Calibrated Value on Pan Axis (Read Only)</Description>
+      <ReadOnly>True</ReadOnly>
+      <User>Standard</User>
+    </GMB_HOFF_PAN>
+    <RC_LIM_MIN_PAN>
+      <DisplayName>Min Limit on Pan Axis</DisplayName>
+      <Description>Min Limit on Pan Axis</Description>
+      <Range>-320 0</Range>
+      <User>Standard</User>
+    </RC_LIM_MIN_PAN>
+    <RC_LIM_MAX_PAN>
+      <DisplayName>Max Limit on Pan Axis</DisplayName>
+      <Description>Max Limit on Pan Axis</Description>
+      <Range>0 320</Range>
+      <User>Standard</User>
+    </RC_LIM_MAX_PAN>
+    <GMB_OFF_OVAL>
+      <DisplayName>Accelerometer Oval Offset</DisplayName>
+      <Description>Accelerometer Oval Offset</Description>
+      <Range>0 2</Range>
+      <User>Standard</User>
+    </GMB_OFF_OVAL>
+    <MAV_EMIT_HB>
+      <DisplayName>Frequency of Heartbeat Messages in Hz</DisplayName>
+      <Description>Frequency of Heartbeat Messages in Hz</Description>
+      <Range>0 50</Range>
+      <User>Standard</User>
+    </MAV_EMIT_HB>
+    <MAV_RATE_ST>
+      <DisplayName>Frequency of System Status Messages in Hz</DisplayName>
+      <Description>Frequency of System Status Messages in Hz</Description>
+      <Range>0 50</Range>
+      <User>Standard</User>
+    </MAV_RATE_ST>
+    <MAV_RATE_ENCCNT>
+      <DisplayName>Frequency of Encoder Messages in Hz</DisplayName>
+      <Description>Frequency of Encoder Messages in Hz</Description>
+      <Range>0 50</Range>
+      <User>Standard</User>
+    </MAV_RATE_ENCCNT>
+    <MAV_TS_ENCNT>
+      <DisplayName>Control Mode: Angle or Rate</DisplayName>
+      <Description>Control Mode: Angle or Rate</Description>
+      <Range>0 1</Range>
+      <User>Standard</User>
+    </MAV_TS_ENCNT>
+    <MAV_RATE_ORIEN>
+      <DisplayName>Frequency of Mount Orientation Messages in Hz</DisplayName>
+      <Description>Frequency of Mount Orientation Messages in Hz</Description>
+      <Range>0 50</Range>
+      <User>Standard</User>
+    </MAV_RATE_ORIEN>
+    <MAV_RATE_IMU>
+      <DisplayName>Frequency of IMU Messages in Hz</DisplayName>
+      <Description>Frequency of IMU Messages in Hz</Description>
+      <Range>0 50</Range>
+      <User>Standard</User>
+    </MAV_RATE_IMU>
+    <BAUDRATE_COM2>
+      <DisplayName>Baudrate on COM port 2</DisplayName>
+      <Description>Baudrate on COM port 2</Description>
+      <Range>1152 9216</Range>
+      <User>Standard</User>
+    </BAUDRATE_COM2>
+    <BAUDRATE_COM4>
+      <DisplayName>Baudrate on COM port 4</DisplayName>
+      <Description>Baudrate on COM port 4</Description>
+      <Range>1152 9216</Range>
+      <User>Standard</User>
+    </BAUDRATE_COM4>
+    <GIMBAL_COMPID>
+      <DisplayName>MAVLink Component ID of Gimbal</DisplayName>
+      <Description>MAVLink Component ID of Gimbal</Description>
+      <Range>154 175</Range>
+      <User>Standard</User>
+    </GIMBAL_COMPID>
+    <TILT_DAMPING>
+      <DisplayName>Damping on Tilt Axis</DisplayName>
+      <Description>Damping on Tilt Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </TILT_DAMPING>
+    <ROLL_DAMPING>
+      <DisplayName>Damping on Roll Axis</DisplayName>
+      <Description>Damping on Roll Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </ROLL_DAMPING>
+    <PAN_DAMPING>
+      <DisplayName>Damping on Pan Axis</DisplayName>
+      <Description>Damping on Pan Axis</Description>
+      <Range>0 255</Range>
+      <User>Standard</User>
+    </PAN_DAMPING>
+  </ArduCopter2>
+</Params>
