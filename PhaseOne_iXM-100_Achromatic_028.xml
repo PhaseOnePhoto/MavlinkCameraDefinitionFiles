@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <mavlinkcamera>
-    <definition version="?">
-        <model>?</model>
-        <vendor>?</vendor>
+    <definition version="28">
+        <model>iXM-100_Achromatic</model>
+        <vendor>PhaseOne</vendor>
     </definition>
     <parameters>
         <parameter name="CAM_EXPMODE" type="uint32" default="0">
@@ -34,21 +34,110 @@
         <parameter name="CAM_ISO" type="uint32" default="200">
             <description>ISO</description>
             <options>
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="320" value="320" />
+                <option name="400" value="400" />
+                <option name="500" value="500" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1000" value="1000" />
+                <option name="1250" value="1250" />
+                <option name="1600" value="1600" />
+                <option name="2000" value="2000" />
+                <option name="2500" value="2500" />
+                <option name="3200" value="3200" />
+                <option name="4000" value="4000" />
+                <option name="5000" value="5000" />
+                <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="CAM_APERTURE" type="float" default="5.6">
             <description>Aperture</description>
             <options>
+                <option name="f5.6" value="5.6" />
+                <option name="f6.3" value="6.3" />
+                <option name="f7.1" value="7.1" />
+                <option name="f8" value="8.0" />
+                <option name="f9" value="9.0" />
+                <option name="f10" value="10.0" />
+                <option name="f11" value="11.0" />
+                <option name="f12" value="12.0" />
+                <option name="f14" value="14.0" />
+                <option name="f16" value="16.0" />
+                <option name="f18" value="18.0" />
+                <option name="f20" value="20.0" />
+                <option name="f22" value="22.0" />
             </options>
         </parameter>
         <parameter name="CAM_SHUTTERSPD" type="int32" default="1000">
             <description>Shutter Speed</description>
             <options>
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="0.5s" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1s" value="-1000" />
             </options>
         </parameter>
         <parameter name="CAM_EV" type="float" default="0.0">
             <description>Exposure Compensation</description>
             <options>
+                <option name="-3.0" value="-3.0" />
+                <option name="-2.7" value="-2.67" />
+                <option name="-2.3" value="-2.33" />
+                <option name="-2.0" value="-2.0" />
+                <option name="-1.7" value="-1.67" />
+                <option name="-1.3" value="-1.33" />
+                <option name="-1.0" value="-1.0" />
+                <option name="-0.7" value="-0.67" />
+                <option name="-0.3" value="-0.33" />
+                <option name="0" value="0.0" />
+                <option name="+0.3" value="0.33" />
+                <option name="+0.7" value="0.67" />
+                <option name="+1.0" value="1.0" />
+                <option name="+1.3" value="1.33" />
+                <option name="+1.7" value="1.67" />
+                <option name="+2.0" value="2.0" />
+                <option name="+2.3" value="2.33" />
+                <option name="+2.7" value="2.67" />
+                <option name="+3.0" value="3.0" />
             </options>
         </parameter>
         <parameter name="AE_PRIORITY" type="uint32" default="1">
@@ -65,31 +154,171 @@
         <parameter name="AE_ISO_MIN" type="uint32" default="200">
             <description>AE ISO Min</description>
             <options>
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="320" value="320" />
+                <option name="400" value="400" />
+                <option name="500" value="500" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1000" value="1000" />
+                <option name="1250" value="1250" />
+                <option name="1600" value="1600" />
+                <option name="2000" value="2000" />
+                <option name="2500" value="2500" />
+                <option name="3200" value="3200" />
+                <option name="4000" value="4000" />
+                <option name="5000" value="5000" />
+                <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="AE_ISO_MAX" type="uint32" default="800">
             <description>AE ISO Max</description>
             <options>
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="320" value="320" />
+                <option name="400" value="400" />
+                <option name="500" value="500" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1000" value="1000" />
+                <option name="1250" value="1250" />
+                <option name="1600" value="1600" />
+                <option name="2000" value="2000" />
+                <option name="2500" value="2500" />
+                <option name="3200" value="3200" />
+                <option name="4000" value="4000" />
+                <option name="5000" value="5000" />
+                <option name="6400" value="6400" />
+                <option name="8000" value="8000" />
+                <option name="10000" value="10000" />
+                <option name="12800" value="12800" />
+                <option name="16000" value="16000" />
+                <option name="20000" value="20000" />
+                <option name="25600" value="25600" />
             </options>
         </parameter>
         <parameter name="AE_SH_SPD_MIN" type="int32" default="1000">
             <description>AE Shutter Speed Min</description>
             <options>
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="0.5s" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1s" value="-1000" />
             </options>
         </parameter>
         <parameter name="AE_SH_SPD_MAX" type="int32" default="2500">
             <description>AE Shutter Speed Max</description>
             <options>
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="0.5s" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1s" value="-1000" />
             </options>
         </parameter>
         <parameter name="AE_APERTURE_MIN" type="float" default="5.6">
             <description>AE Aperture Min</description>
             <options>
+                <option name="f5.6" value="5.6" />
+                <option name="f6.3" value="6.3" />
+                <option name="f7.1" value="7.1" />
+                <option name="f8" value="8.0" />
+                <option name="f9" value="9.0" />
+                <option name="f10" value="10.0" />
+                <option name="f11" value="11.0" />
+                <option name="f12" value="12.0" />
+                <option name="f14" value="14.0" />
+                <option name="f16" value="16.0" />
+                <option name="f18" value="18.0" />
+                <option name="f20" value="20.0" />
+                <option name="f22" value="22.0" />
             </options>
         </parameter>
         <parameter name="AE_APERTURE_MAX" type="float" default="11.0">
             <description>AE Aperture Max</description>
             <options>
+                <option name="f5.6" value="5.6" />
+                <option name="f6.3" value="6.3" />
+                <option name="f7.1" value="7.1" />
+                <option name="f8" value="8.0" />
+                <option name="f9" value="9.0" />
+                <option name="f10" value="10.0" />
+                <option name="f11" value="11.0" />
+                <option name="f12" value="12.0" />
+                <option name="f14" value="14.0" />
+                <option name="f16" value="16.0" />
+                <option name="f18" value="18.0" />
+                <option name="f20" value="20.0" />
+                <option name="f22" value="22.0" />
             </options>
         </parameter>
         <parameter name="FOCUS_MODE" type="uint32" default="0">
@@ -132,7 +361,7 @@
                         <exclude>AF_STRATEGY_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Relative Distance" value="2"/>
+                <option name="Relative Distance" value="2" />
             </options>
         </parameter>
         <parameter name="AF_STRATEGY_THR" type="float" default="5.0">
@@ -221,18 +450,6 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Burst Mode" value="7">
-                    <exclusions>
-                        <exclude>DIST_INTERVAL</exclude>
-                        <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
-                        <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
-                        <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
-                        <exclude>FOCUS_BKT_DEPTH</exclude>
-                    </exclusions>
-                </option>
             </options>
         </parameter>
         <parameter name="DIST_INTERVAL" type="float" default="5.0">
@@ -244,9 +461,9 @@
         <parameter name="FOCUS_BKT_MODE" type="uint8" default="1">
             <description> - Bracketing Mode</description>
             <options>
-                <option name="Around Focus Point"   value="0" />
+                <option name="Around Focus Point" value="0" />
                 <option name="In Front Focus Point" value="1" />
-                <option name="Behind Focus Point"   value="2" />
+                <option name="Behind Focus Point" value="2" />
             </options>
         </parameter>
         <parameter name="FOCUS_BKT_CNT" type="uint32" default="5">
@@ -280,14 +497,14 @@
                         <exclude>PREVIEW_TIME</exclude>
                     </exclusions>
                 </option>
-                <option name="Enable"  value="1" />
+                <option name="Enable" value="1" />
             </options>
         </parameter>
         <parameter name="HDMI_LV_ZOOM" type="uint8" default="0">
             <description> - HDMI LiveView Zoom</description>
             <options>
                 <option name="Overview" value="0" />
-                <option name="100%"  value="1" />
+                <option name="100%" value="1" />
             </options>
         </parameter>
         <parameter name="HDMI_OVERLAY" type="uint8" default="1">
@@ -295,8 +512,8 @@
             <options>
                 <option name="None" value="0">
                 </option>
-                <option name="West"  value="4" />
-                <option name="South"  value="5" />
+                <option name="West" value="4" />
+                <option name="South" value="5" />
             </options>
         </parameter>
         <parameter name="OVERLAY_TRANSP" type="uint8" default="127">
@@ -306,13 +523,13 @@
             <description> - Overlay Focus Point</description>
             <options>
                 <option name="Disable" value="0" />
-                <option name="Enable"  value="1" />
+                <option name="Enable" value="1" />
             </options>
         </parameter>
         <parameter name="OVERLAY_PREVIEW" type="uint32" default="1">
             <description> - Overlay Preview</description>
             <options>
-                <option name="Off"   value="0" />
+                <option name="Off" value="0" />
                 <option name="Small" value="1" />
                 <option name="Large" value="4" />
             </options>
@@ -321,12 +538,12 @@
             <description> - Overlay Preview Time</description>
             <options>
                 <option name="No Timeout" value="0" />
-                <option name="2s"         value="2000" />
-                <option name="4s"         value="4000" />
-                <option name="6s"         value="6000" />
-                <option name="10s"        value="10000" />
-                <option name="15s"        value="15000" />
-                <option name="30s"        value="30000" />
+                <option name="2s" value="2000" />
+                <option name="4s" value="4000" />
+                <option name="6s" value="6000" />
+                <option name="10s" value="10000" />
+                <option name="15s" value="15000" />
+                <option name="30s" value="30000" />
             </options>
         </parameter>
         <parameter name="FOCUS_MASK" type="uint8" default="1">
@@ -337,7 +554,7 @@
                         <exclude>FOCUS_MASK_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Enable"  value="1" />
+                <option name="Enable" value="1" />
             </options>
         </parameter>
         <parameter name="FOCUS_MASK_THR" type="uint32" default="500">
@@ -347,21 +564,21 @@
             <description>New Folder</description>
             <options>
                 <option name="None" value="0" />
-                <option name="Create"  value="1" />
+                <option name="Create" value="1" />
             </options>
         </parameter>
         <parameter name="STORAGE_FORMAT" type="uint8" default="0">
             <description>Storage</description>
             <options>
                 <option name="None" value="0" />
-                <option name="Format"  value="1" />
+                <option name="Format" value="1" />
             </options>
         </parameter>
         <parameter name="MASS_STORAGE" type="uint8" default="0">
             <description>Mass Storage</description>
             <options>
                 <option name="Disable" value="0" />
-                <option name="Enable"  value="1" />
+                <option name="Enable" value="1" />
             </options>
         </parameter>
         <parameter name="CUSTOM_INFO" type="custom" default="">
