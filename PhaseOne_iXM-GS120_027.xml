@@ -5,7 +5,7 @@
         <vendor>PhaseOne</vendor>
     </definition>
     <parameters>
-        <parameter name="CAM_EXPMODE" type="uint32" default="0">
+        <parameter name="CAM_EXPMODE" iqp_id="1000" type="uint32" default="0">
             <description>Exposure Mode</description>
             <options>
                 <option name="Manual" value="0">
@@ -22,14 +22,14 @@
                 </option>
             </options>
         </parameter>
-        <parameter name="SHUTTER_MODE" type="uint32" default="1">
+        <parameter name="SHUTTER_MODE" iqp_id="1008" type="uint32" default="1">
             <description>Shutter Mode</description>
             <options>
-                <option name="Fusion Shutter" value="0" />
-                <option name="Electronic Shutter" value="1" />
+                <option name="LS" value="0" />
+                <option name="ES" value="1" />
             </options>
         </parameter>
-        <parameter name="CAM_ISO" type="uint32" default="200">
+        <parameter name="CAM_ISO" iqp_id="120" type="uint32" default="200">
             <description>ISO</description>
             <options>
                 <option name="200" value="200" />
@@ -50,25 +50,270 @@
                 <option name="6400" value="6400" />
             </options>
         </parameter>
-        <parameter name="CAM_APERTURE" type="float" default="5.6">
+        <parameter name="CAM_APERTURE" iqp_id="1003" type="float" default="5.6">
             <description>Aperture</description>
             <options>
-                <option name="f5.6" value="5.6" />
-                <option name="f6.3" value="6.3" />
-                <option name="f7.1" value="7.1" />
-                <option name="f8" value="8.0" />
-                <option name="f9" value="9.0" />
-                <option name="f10" value="10.0" />
-                <option name="f11" value="11.0" />
-                <option name="f12" value="12.0" />
-                <option name="f14" value="14.0" />
-                <option name="f16" value="16.0" />
-                <option name="f18" value="18.0" />
-                <option name="f20" value="20.0" />
-                <option name="f22" value="22.0" />
+                <option name="5.6" value="5.6" />
+                <option name="6.3" value="6.3" />
+                <option name="7.1" value="7.1" />
+                <option name="8.0" value="8.0" />
+                <option name="9.0" value="9.0" />
+                <option name="10" value="10.0" />
+                <option name="11" value="11.0" />
+                <option name="12" value="12.0" />
+                <option name="14" value="14.0" />
+                <option name="16" value="16.0" />
+                <option name="18" value="18.0" />
+                <option name="20" value="20.0" />
+                <option name="22" value="22.0" />
             </options>
         </parameter>
-        <parameter name="CAM_SHUTTERSPD" type="int32" default="1000">
+        <parameter name="CAM_SHUTTERSPD_ES" iqp_id="1002" type="int32" default="1000">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="1/4000" value="4000" />
+                <option name="1/3200" value="3200" />
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="1/2" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1.0s" value="-1000" />
+            </options>
+        </parameter>
+        <parameter name="CAM_SHUTTERSPD_LS" iqp_id="1002" type="int32" default="1000">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="1/4000" value="4000" />
+                <option name="1/3200" value="3200" />
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="1/2" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1.0s" value="-1000" />
+            </options>
+        </parameter>
+        <parameter name="CAM_EV" iqp_id="1004" type="float" default="0.0">
+            <description>Exposure Compensation</description>
+            <options>
+                <option name="-3.0" value="-3.0" />
+                <option name="-2.7" value="-2.67" />
+                <option name="-2.3" value="-2.33" />
+                <option name="-2.0" value="-2.0" />
+                <option name="-1.7" value="-1.67" />
+                <option name="-1.3" value="-1.33" />
+                <option name="-1.0" value="-1.0" />
+                <option name="-0.7" value="-0.67" />
+                <option name="-0.3" value="-0.33" />
+                <option name="+0.0" value="0.0" />
+                <option name="+0.3" value="0.33" />
+                <option name="+0.7" value="0.67" />
+                <option name="+1.0" value="1.0" />
+                <option name="+1.3" value="1.33" />
+                <option name="+1.7" value="1.67" />
+                <option name="+2.0" value="2.0" />
+                <option name="+2.3" value="2.33" />
+                <option name="+2.7" value="2.67" />
+                <option name="+3.0" value="3.0" />
+            </options>
+        </parameter>
+        <parameter name="AE_PRIORITY" iqp_id="1040" type="uint32" default="1">
+            <description>AE Priority</description>
+            <options>
+                <option name="ISO/Aperture/Shutter" value="0" />
+                <option name="ISO/Shutter/Aperture" value="1" />
+                <option name="Aperture/ISO/Shutter" value="2" />
+                <option name="Aperture/Shutter/ISO" value="3" />
+                <option name="Shutter/Aperture/ISO" value="4" />
+                <option name="Shutter/ISO/Aperture" value="5" />
+            </options>
+        </parameter>
+        <parameter name="AE_ISO_MIN" iqp_id="1051" type="uint32" default="200">
+            <description>AE ISO Min</description>
+            <options>
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="320" value="320" />
+                <option name="400" value="400" />
+                <option name="500" value="500" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1000" value="1000" />
+                <option name="1250" value="1250" />
+                <option name="1600" value="1600" />
+                <option name="2000" value="2000" />
+                <option name="2500" value="2500" />
+                <option name="3200" value="3200" />
+                <option name="4000" value="4000" />
+                <option name="5000" value="5000" />
+                <option name="6400" value="6400" />
+            </options>
+        </parameter>
+        <parameter name="AE_ISO_MAX" iqp_id="1052" type="uint32" default="800">
+            <description>AE ISO Max</description>
+            <options>
+                <option name="200" value="200" />
+                <option name="250" value="250" />
+                <option name="320" value="320" />
+                <option name="400" value="400" />
+                <option name="500" value="500" />
+                <option name="640" value="640" />
+                <option name="800" value="800" />
+                <option name="1000" value="1000" />
+                <option name="1250" value="1250" />
+                <option name="1600" value="1600" />
+                <option name="2000" value="2000" />
+                <option name="2500" value="2500" />
+                <option name="3200" value="3200" />
+                <option name="4000" value="4000" />
+                <option name="5000" value="5000" />
+                <option name="6400" value="6400" />
+            </options>
+        </parameter>
+        <parameter name="AE_SH_SPD_MIN_ES" iqp_id="1053" type="int32" default="1000">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="1/4000" value="4000" />
+                <option name="1/3200" value="3200" />
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="1/2" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1.0s" value="-1000" />
+            </options>
+        </parameter>
+        <parameter name="AE_SH_SPD_MAX_ES" iqp_id="1054" type="int32" default="1000">
+            <description>Shutter Speed</description>
+            <options>
+                <option name="1/4000" value="4000" />
+                <option name="1/3200" value="3200" />
+                <option name="1/2500" value="2500" />
+                <option name="1/2000" value="2000" />
+                <option name="1/1600" value="1600" />
+                <option name="1/1250" value="1250" />
+                <option name="1/1000" value="1000" />
+                <option name="1/800" value="800" />
+                <option name="1/640" value="640" />
+                <option name="1/500" value="500" />
+                <option name="1/400" value="400" />
+                <option name="1/320" value="320" />
+                <option name="1/250" value="250" />
+                <option name="1/200" value="200" />
+                <option name="1/160" value="160" />
+                <option name="1/125" value="125" />
+                <option name="1/100" value="100" />
+                <option name="1/80" value="80" />
+                <option name="1/60" value="60" />
+                <option name="1/50" value="50" />
+                <option name="1/40" value="40" />
+                <option name="1/30" value="30" />
+                <option name="1/25" value="25" />
+                <option name="1/20" value="20" />
+                <option name="1/15" value="15" />
+                <option name="1/13" value="13" />
+                <option name="1/10" value="10" />
+                <option name="1/8" value="8" />
+                <option name="1/6" value="6" />
+                <option name="1/5" value="5" />
+                <option name="1/4" value="4" />
+                <option name="1/3" value="3" />
+                <option name="0.4s" value="-400" />
+                <option name="1/2" value="-500" />
+                <option name="0.6s" value="-600" />
+                <option name="0.8s" value="-800" />
+                <option name="1.0s" value="-1000" />
+            </options>
+        </parameter>
+        <parameter name="AE_SH_SPD_MIN_LS" iqp_id="1053" type="int32" default="1000">
             <description>Shutter Speed</description>
             <options>
                 <option name="1/16000" value="16000" />
@@ -110,91 +355,14 @@
                 <option name="1/4" value="4" />
                 <option name="1/3" value="3" />
                 <option name="0.4s" value="-400" />
-                <option name="0.5s" value="-500" />
+                <option name="1/2" value="-500" />
                 <option name="0.6s" value="-600" />
                 <option name="0.8s" value="-800" />
-                <option name="1s" value="-1000" />
+                <option name="1.0s" value="-1000" />
             </options>
         </parameter>
-        <parameter name="CAM_EV" type="float" default="0.0">
-            <description>Exposure Compensation</description>
-            <options>
-                <option name="-3.0" value="-3.0" />
-                <option name="-2.7" value="-2.67" />
-                <option name="-2.3" value="-2.33" />
-                <option name="-2.0" value="-2.0" />
-                <option name="-1.7" value="-1.67" />
-                <option name="-1.3" value="-1.33" />
-                <option name="-1.0" value="-1.0" />
-                <option name="-0.7" value="-0.67" />
-                <option name="-0.3" value="-0.33" />
-                <option name="0" value="0.0" />
-                <option name="+0.3" value="0.33" />
-                <option name="+0.7" value="0.67" />
-                <option name="+1.0" value="1.0" />
-                <option name="+1.3" value="1.33" />
-                <option name="+1.7" value="1.67" />
-                <option name="+2.0" value="2.0" />
-                <option name="+2.3" value="2.33" />
-                <option name="+2.7" value="2.67" />
-                <option name="+3.0" value="3.0" />
-            </options>
-        </parameter>
-        <parameter name="AE_PRIORITY" type="uint32" default="1">
-            <description>AE Priority</description>
-            <options>
-                <option name="ISO/Aperture/Shutter" value="0" />
-                <option name="ISO/Shutter/Aperture" value="1" />
-                <option name="Aperture/ISO/Shutter" value="2" />
-                <option name="Aperture/Shutter/ISO" value="3" />
-                <option name="Shutter/Aperture/ISO" value="4" />
-                <option name="Shutter/ISO/Aperture" value="5" />
-            </options>
-        </parameter>
-        <parameter name="AE_ISO_MIN" type="uint32" default="200">
-            <description>AE ISO Min</description>
-            <options>
-                <option name="200" value="200" />
-                <option name="250" value="250" />
-                <option name="320" value="320" />
-                <option name="400" value="400" />
-                <option name="500" value="500" />
-                <option name="640" value="640" />
-                <option name="800" value="800" />
-                <option name="1000" value="1000" />
-                <option name="1250" value="1250" />
-                <option name="1600" value="1600" />
-                <option name="2000" value="2000" />
-                <option name="2500" value="2500" />
-                <option name="3200" value="3200" />
-                <option name="4000" value="4000" />
-                <option name="5000" value="5000" />
-                <option name="6400" value="6400" />
-            </options>
-        </parameter>
-        <parameter name="AE_ISO_MAX" type="uint32" default="800">
-            <description>AE ISO Max</description>
-            <options>
-                <option name="200" value="200" />
-                <option name="250" value="250" />
-                <option name="320" value="320" />
-                <option name="400" value="400" />
-                <option name="500" value="500" />
-                <option name="640" value="640" />
-                <option name="800" value="800" />
-                <option name="1000" value="1000" />
-                <option name="1250" value="1250" />
-                <option name="1600" value="1600" />
-                <option name="2000" value="2000" />
-                <option name="2500" value="2500" />
-                <option name="3200" value="3200" />
-                <option name="4000" value="4000" />
-                <option name="5000" value="5000" />
-                <option name="6400" value="6400" />
-            </options>
-        </parameter>
-        <parameter name="AE_SH_SPD_MIN" type="int32" default="1000">
-            <description>AE Shutter Speed Min</description>
+        <parameter name="AE_SH_SPD_MAX_LS" iqp_id="1054" type="int32" default="1000">
+            <description>Shutter Speed</description>
             <options>
                 <option name="1/16000" value="16000" />
                 <option name="1/13000" value="13000" />
@@ -235,100 +403,52 @@
                 <option name="1/4" value="4" />
                 <option name="1/3" value="3" />
                 <option name="0.4s" value="-400" />
-                <option name="0.5s" value="-500" />
+                <option name="1/2" value="-500" />
                 <option name="0.6s" value="-600" />
                 <option name="0.8s" value="-800" />
-                <option name="1s" value="-1000" />
+                <option name="1.0s" value="-1000" />
             </options>
         </parameter>
-        <parameter name="AE_SH_SPD_MAX" type="int32" default="2500">
-            <description>AE Shutter Speed Max</description>
-            <options>
-                <option name="1/16000" value="16000" />
-                <option name="1/13000" value="13000" />
-                <option name="1/10000" value="10000" />
-                <option name="1/8000" value="8000" />
-                <option name="1/6500" value="6500" />
-                <option name="1/5000" value="5000" />
-                <option name="1/4000" value="4000" />
-                <option name="1/3200" value="3200" />
-                <option name="1/2500" value="2500" />
-                <option name="1/2000" value="2000" />
-                <option name="1/1600" value="1600" />
-                <option name="1/1250" value="1250" />
-                <option name="1/1000" value="1000" />
-                <option name="1/800" value="800" />
-                <option name="1/640" value="640" />
-                <option name="1/500" value="500" />
-                <option name="1/400" value="400" />
-                <option name="1/320" value="320" />
-                <option name="1/250" value="250" />
-                <option name="1/200" value="200" />
-                <option name="1/160" value="160" />
-                <option name="1/125" value="125" />
-                <option name="1/100" value="100" />
-                <option name="1/80" value="80" />
-                <option name="1/60" value="60" />
-                <option name="1/50" value="50" />
-                <option name="1/40" value="40" />
-                <option name="1/30" value="30" />
-                <option name="1/25" value="25" />
-                <option name="1/20" value="20" />
-                <option name="1/15" value="15" />
-                <option name="1/13" value="13" />
-                <option name="1/10" value="10" />
-                <option name="1/8" value="8" />
-                <option name="1/6" value="6" />
-                <option name="1/5" value="5" />
-                <option name="1/4" value="4" />
-                <option name="1/3" value="3" />
-                <option name="0.4s" value="-400" />
-                <option name="0.5s" value="-500" />
-                <option name="0.6s" value="-600" />
-                <option name="0.8s" value="-800" />
-                <option name="1s" value="-1000" />
-            </options>
-        </parameter>
-        <parameter name="AE_APERTURE_MIN" type="float" default="5.6">
+        <parameter name="AE_APERTURE_MIN" iqp_id="1055" type="float" default="5.6">
             <description>AE Aperture Min</description>
             <options>
-                <option name="f5.6" value="5.6" />
-                <option name="f6.3" value="6.3" />
-                <option name="f7.1" value="7.1" />
-                <option name="f8" value="8.0" />
-                <option name="f9" value="9.0" />
-                <option name="f10" value="10.0" />
-                <option name="f11" value="11.0" />
-                <option name="f12" value="12.0" />
-                <option name="f14" value="14.0" />
-                <option name="f16" value="16.0" />
-                <option name="f18" value="18.0" />
-                <option name="f20" value="20.0" />
-                <option name="f22" value="22.0" />
+                <option name="5.6" value="5.6" />
+                <option name="6.3" value="6.3" />
+                <option name="7.1" value="7.1" />
+                <option name="8.0" value="8.0" />
+                <option name="9.0" value="9.0" />
+                <option name="10" value="10.0" />
+                <option name="11" value="11.0" />
+                <option name="12" value="12.0" />
+                <option name="14" value="14.0" />
+                <option name="16" value="16.0" />
+                <option name="18" value="18.0" />
+                <option name="20" value="20.0" />
+                <option name="22" value="22.0" />
             </options>
         </parameter>
-        <parameter name="AE_APERTURE_MAX" type="float" default="11.0">
+        <parameter name="AE_APERTURE_MAX" iqp_id="1056" type="float" default="11.0">
             <description>AE Aperture Max</description>
             <options>
-                <option name="f5.6" value="5.6" />
-                <option name="f6.3" value="6.3" />
-                <option name="f7.1" value="7.1" />
-                <option name="f8" value="8.0" />
-                <option name="f9" value="9.0" />
-                <option name="f10" value="10.0" />
-                <option name="f11" value="11.0" />
-                <option name="f12" value="12.0" />
-                <option name="f14" value="14.0" />
-                <option name="f16" value="16.0" />
-                <option name="f18" value="18.0" />
-                <option name="f20" value="20.0" />
-                <option name="f22" value="22.0" />
+                <option name="5.6" value="5.6" />
+                <option name="6.3" value="6.3" />
+                <option name="7.1" value="7.1" />
+                <option name="8.0" value="8.0" />
+                <option name="9.0" value="9.0" />
+                <option name="10" value="10.0" />
+                <option name="11" value="11.0" />
+                <option name="12" value="12.0" />
+                <option name="14" value="14.0" />
+                <option name="16" value="16.0" />
+                <option name="18" value="18.0" />
+                <option name="20" value="20.0" />
+                <option name="22" value="22.0" />
             </options>
         </parameter>
-        <parameter name="FOCUS_MODE" type="uint32" default="0">
+        <parameter name="FOCUS_MODE" iqp_id="1085" type="uint32" default="0">
             <description>Focus Mode</description>
             <options>
-                <option name="Manual" value="0">
+                <option name="Manual Focus" value="0">
                     <exclusions>
                         <exclude>AF_MIN_DIST</exclude>
                         <exclude>AF_MAX_DIST</exclude>
@@ -336,23 +456,23 @@
                         <exclude>AF_STRATEGY_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Auto" value="1">
+                <option name="Auto Focus" value="1">
                     <exclusions>
                         <exclude>FOCUS_DIST</exclude>
                     </exclusions>
                 </option>
             </options>
         </parameter>
-        <parameter name="FOCUS_DIST" type="float" default="0.0">
+        <parameter name="FOCUS_DIST" iqp_id="1033" type="float" default="0.0" Min="3.0" Max="100.0"> 
             <description>Focus Distance [m]</description>
         </parameter>
-        <parameter name="AF_MIN_DIST" type="float" default="0.0">
+        <parameter name="AF_MIN_DIST" iqp_id="1086" type="float" default="0.0">
             <description>Auto Focus Min Distance [m]</description>
         </parameter>
-        <parameter name="AF_MAX_DIST" type="float" default="0.0">
+        <parameter name="AF_MAX_DIST" iqp_id="1087" type="float" default="0.0">
             <description>Auto Focus Max Distance [m]</description>
         </parameter>
-        <parameter name="AF_STRATEGY" type="uint32" default="0">
+        <parameter name="AF_STRATEGY" iqp_id="1507" type="uint32" default="0">
             <description>Focus Limit Control</description>
             <options>
                 <option name="Clip Distance" value="0">
@@ -365,13 +485,13 @@
                         <exclude>AF_STRATEGY_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Relative Distance" value="2" />
+                <option name="Thin Structures" value="2" />
             </options>
         </parameter>
-        <parameter name="AF_STRATEGY_THR" type="float" default="5.0">
+        <parameter name="AF_STRATEGY_THR" iqp_id="1508" type="float" default="5.0" Min="0.0" Max="20.0">
             <description>Relative Change Threshold [m]</description>
         </parameter>
-        <parameter name="CAPTURE_MODE" type="uint32" default="0">
+        <parameter name="CAPTURE_MODE" iqp_id="1500" type="uint32" default="0">
             <description>Auto Capture Mode</description>
             <options>
                 <option name="Off" value="0">
@@ -387,7 +507,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Horiontal Distance Interval" value="1">
+                <option name="Horizontal Distance" value="1">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -399,7 +519,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Vertical Distance Interval" value="2">
+                <option name="Vertical Distance" value="2">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -411,7 +531,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="3D Distance Interval" value="3">
+                <option name="3D Distance" value="3">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -423,7 +543,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Time Interval" value="4">
+                <option name="Timelapse" value="4">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -435,7 +555,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Manual Focus Bracketing" value="5">
+                <option name="Focus Bracketing Manual" value="5">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
@@ -445,62 +565,50 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Automatic Focus Bracketing" value="6">
+                <option name="Focus Bracketing Auto" value="6">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
                         <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>CAPTURE_COUNT</exclude>
-                    </exclusions>
-                </option>
-                <option name="Burst Mode" value="7">
-                    <exclusions>
-                        <exclude>DIST_INTERVAL</exclude>
-                        <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
-                        <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
-                        <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
-                        <exclude>FOCUS_BKT_DEPTH</exclude>
                     </exclusions>
                 </option>
             </options>
         </parameter>
-        <parameter name="DIST_INTERVAL" type="float" default="5.0">
+        <parameter name="DIST_INTERVAL" iqp_id="1503" type="float" default="5.0" Min="0.0" Max="1000.0">
             <description> - Distance Interval [m]</description>
         </parameter>
-        <parameter name="TIME_INTERVAL" type="float" default="3.0">
+        <parameter name="TIME_INTERVAL" iqp_id="1501" type="float" default="3.0" Min="0.0" Max="3600.0">
             <description> - Time Interval [s]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_MODE" type="uint8" default="1">
+        <parameter name="FOCUS_BKT_MODE" iqp_id="1283" type="uint8" default="1">
             <description> - Bracketing Mode</description>
             <options>
                 <option name="Around Focus Point" value="0" />
-                <option name="In Front Focus Point" value="1" />
+                <option name="In Front Of Focus Point" value="1" />
                 <option name="Behind Focus Point" value="2" />
             </options>
         </parameter>
-        <parameter name="FOCUS_BKT_CNT" type="uint32" default="5">
+        <parameter name="FOCUS_BKT_CNT" iqp_id="1281" type="uint32" default="5" Min="2" Max="50">
             <description> - Bracketing Capture Count</description>
         </parameter>
-        <parameter name="FOCUS_BKT_STEP" type="uint32" default="20">
+        <parameter name="FOCUS_BKT_STEP" iqp_id="1282" type="uint32" default="20" Min="1" Max="200">
             <description> - Bracketing Step</description>
         </parameter>
-        <parameter name="FOCUS_BKT_COC" type="uint32" default="3">
+        <parameter name="FOCUS_BKT_COC" iqp_id="1284" type="uint32" default="3" Min="1" Max="10">
             <description> - Circle of Confusion [pixels]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_OVRLP" type="uint32" default="20">
+        <parameter name="FOCUS_BKT_OVRLP" iqp_id="1285" type="uint32" default="20" Min="10" Max="90">
             <description> - Overlap Between Images [%]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_DEPTH" type="float" default="10">
+        <parameter name="FOCUS_BKT_DEPTH" iqp_id="1286" type="float" default="10" Min="1.0" Max="100.0">
             <description> - Object Depth [m]</description>
         </parameter>
-        <parameter name="CAPTURE_COUNT" type="uint32" default="10">
+        <parameter name="CAPTURE_COUNT" iqp_id="1491" type="uint32" default="10" Min="1" Max="10">
             <description> - Burst Capture Count</description>
         </parameter>
-        <parameter name="HDMI_LV" type="uint8" default="1">
+        <parameter name="HDMI_LV" iqp_id="1220" type="uint8" default="1">
             <description>HDMI Live View</description>
             <options>
                 <option name="Disable" value="0">
@@ -516,44 +624,44 @@
                 <option name="Enable" value="1" />
             </options>
         </parameter>
-        <parameter name="HDMI_LV_ZOOM" type="uint8" default="0">
+        <parameter name="HDMI_LV_ZOOM" iqp_id="1248" type="uint8" default="0">
             <description> - HDMI LiveView Zoom</description>
             <options>
                 <option name="Overview" value="0" />
-                <option name="100%" value="1" />
+                <option name="10" value="1" />
             </options>
         </parameter>
-        <parameter name="HDMI_OVERLAY" type="uint8" default="1">
+        <parameter name="HDMI_OVERLAY" iqp_id="1244" type="uint8" default="1">
             <description> - Overlay Layout</description>
             <options>
-                <option name="None" value="0">
-                </option>
-                <option name="West" value="4" />
-                <option name="South" value="5" />
+                <option name="Standard" value="0">
+                <option name="DJI M600" value="0">
+                <option name="DJI M300" value="4" />
+                <option name="Mavlink QGC" value="5" />
             </options>
         </parameter>
-        <parameter name="OVERLAY_TRANSP" type="uint8" default="127">
+        <parameter name="OVERLAY_TRANSP" iqp_id="1245" type="uint8" default="127" Min="0" Max="255">
             <description> - Overlay Transparency</description>
         </parameter>
-        <parameter name="FOCUS_POINT" type="uint8" default="1">
+        <parameter name="FOCUS_POINT" iqp_id="1249" type="uint8" default="1">
             <description> - Overlay Focus Point</description>
             <options>
                 <option name="Disable" value="0" />
                 <option name="Enable" value="1" />
             </options>
         </parameter>
-        <parameter name="OVERLAY_PREVIEW" type="uint8" default="1">
+        <parameter name="OVERLAY_PREVIEW" iqp_id="1241" type="uint8" default="1">
             <description> - Overlay Preview</description>
             <options>
-                <option name="Off" value="0" />
+                <option name="Disable" value="0" />
                 <option name="Small" value="1" />
                 <option name="Large" value="4" />
             </options>
         </parameter>
-        <parameter name="PREVIEW_TIME" type="uint32" default="0">
+        <parameter name="PREVIEW_TIME" iqp_id="1246" type="uint32" default="0">
             <description> - Overlay Preview Time</description>
             <options>
-                <option name="No Timeout" value="0" />
+                <option name="No timeout" value="0" />
                 <option name="2s" value="2000" />
                 <option name="4s" value="4000" />
                 <option name="6s" value="6000" />
@@ -562,7 +670,7 @@
                 <option name="30s" value="30000" />
             </options>
         </parameter>
-        <parameter name="FOCUS_MASK" type="uint8" default="1">
+        <parameter name="FOCUS_MASK" iqp_id="1312" type="uint8" default="1">
             <description>Focus Peaking</description>
             <options>
                 <option name="Disable" value="0">
@@ -573,40 +681,40 @@
                 <option name="Enable" value="1" />
             </options>
         </parameter>
-        <parameter name="FOCUS_MASK_THR" type="uint32" default="500">
+        <parameter name="FOCUS_MASK_THR" iqp_id="1313" type="uint32" default="500" Min="200" Max="900">
             <description> - Focus Peaking Threshold</description>
         </parameter>
-        <parameter name="NEW_FOLDER" type="uint8" default="0">
+        <parameter name="NEW_FOLDER" iqp_id="xxx" type="uint8" default="0">
             <description>New Folder</description>
             <options>
                 <option name="None" value="0" />
                 <option name="Create" value="1" />
             </options>
         </parameter>
-        <parameter name="STORAGE_FORMAT" type="uint8" default="0">
+        <parameter name="STORAGE_FORMAT" iqp_id="1242" type="uint8" default="0">
             <description>Storage</description>
             <options>
                 <option name="None" value="0" />
-                <option name="Format" value="1" />
+                <option name="format" value="1" />
             </options>
         </parameter>
-        <parameter name="MASS_STORAGE" type="uint8" default="0">
+        <parameter name="MASS_STORAGE" iqp_id="1340" type="uint8" default="0">
             <description>Mass Storage</description>
             <options>
-                <option name="Disable" value="0" />
-                <option name="Enable" value="1" />
+                <option name="None" value="0" />
+                <option name="XQD/CFX ReadOnly" value="1" />
             </options>
         </parameter>
-        <parameter name="CUSTOM_INFO" type="custom" default="">
+        <parameter name="CUSTOM_INFO" iqp_id="237" type="custom" default="">
             <description>Custom Information</description>
         </parameter>
-        <parameter name="LEVER_ARM_FRONT" type="float" default="0.0">
+        <parameter name="LEVER_ARM_FRONT" iqp_id="1504" type="float" default="0.0" Min="0.0" Max="1000.0">
             <description>Camera Lever Arm Front [mm]</description>
         </parameter>
-        <parameter name="LEVER_ARM_RIGHT" type="float" default="0.0">
+        <parameter name="LEVER_ARM_RIGHT" iqp_id="1505" type="float" default="0.0" Min="0.0" Max="1000.0">
             <description>Camera Lever Arm Right [mm]</description>
         </parameter>
-        <parameter name="LEVER_ARM_UP" type="float" default="0.0">
+        <parameter name="LEVER_ARM_UP" iqp_id="1506" type="float" default="0.0" Min="0.0" Max="1000.0">
             <description>Camera Lever Arm Up [mm]</description>
         </parameter>
     </parameters>
