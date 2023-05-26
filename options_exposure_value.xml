@@ -9,7 +9,7 @@
     <option name="-1.0" value="-1.0" />
     <option name="-0.7" value="-0.67" />
     <option name="-0.3" value="-0.33" />
-    <option name="0"    value="0.0" />
+    <option name="0"    value="0.0" test_name = '+0.0'/>
     <option name="+0.3" value="0.33" />
     <option name="+0.7" value="0.67" />
     <option name="+1.0" value="1.0" />

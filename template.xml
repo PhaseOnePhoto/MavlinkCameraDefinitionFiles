@@ -5,7 +5,7 @@
         <vendor>?</vendor>
     </definition>
     <parameters>
-        <parameter name="CAM_EXPMODE" type="uint32" default="0">
+        <parameter name="CAM_EXPMODE" iqp_id="1000" type="uint32" default="0">
             <description>Exposure Mode</description>
             <options>
                 <option name="Manual" value="0">
@@ -24,34 +24,32 @@
                 </option>
             </options>
         </parameter>
-        <parameter name="SHUTTER_MODE" type="uint32" default="1">
+        <parameter name="SHUTTER_MODE" iqp_id="1008" type="uint32" default="1">
             <description>Shutter Mode</description>
             <options>
-                <option name="Fusion Shutter" value="0" />
-                <option name="Electronic Shutter" value="1" />
             </options>
         </parameter>
-        <parameter name="CAM_ISO" type="uint32" default="200">
+        <parameter name="CAM_ISO" iqp_id="120" type="uint32" default="200">
             <description>ISO</description>
             <options>
             </options>
         </parameter>
-        <parameter name="CAM_APERTURE" type="float" default="5.6">
+        <parameter name="CAM_APERTURE" iqp_id="1003" type="float" default="5.6">
             <description>Aperture</description>
             <options>
             </options>
         </parameter>
-        <parameter name="CAM_SHUTTERSPD" type="int32" default="1000">
+        <parameter name="CAM_SHUTTERSPD" iqp_id="1002" type="int32" default="1000">
             <description>Shutter Speed</description>
             <options>
             </options>
         </parameter>
-        <parameter name="CAM_EV" type="float" default="0.0">
+        <parameter name="CAM_EV" iqp_id="1004" type="float" default="0.0">
             <description>Exposure Compensation</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_PRIORITY" type="uint32" default="1">
+        <parameter name="AE_PRIORITY" iqp_id="1040" type="uint32" default="1">
             <description>AE Priority</description>
             <options>
                 <option name="ISO/Aperture/Shutter" value="0" />
@@ -62,40 +60,40 @@
                 <option name="Shutter/ISO/Aperture" value="5" />
             </options>
         </parameter>
-        <parameter name="AE_ISO_MIN" type="uint32" default="200">
+        <parameter name="AE_ISO_MIN" iqp_id="1051" type="uint32" default="200">
             <description>AE ISO Min</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_ISO_MAX" type="uint32" default="800">
+        <parameter name="AE_ISO_MAX" iqp_id="1052" type="uint32" default="800">
             <description>AE ISO Max</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_SH_SPD_MIN" type="int32" default="1000">
+        <parameter name="AE_SH_SPD_MIN" iqp_id="1053" type="int32" default="1000">
             <description>AE Shutter Speed Min</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_SH_SPD_MAX" type="int32" default="2500">
+        <parameter name="AE_SH_SPD_MAX" iqp_id="1054" type="int32" default="1000">
             <description>AE Shutter Speed Max</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_APERTURE_MIN" type="float" default="5.6">
+        <parameter name="AE_APERTURE_MIN" iqp_id="1055" type="float" default="5.6">
             <description>AE Aperture Min</description>
             <options>
             </options>
         </parameter>
-        <parameter name="AE_APERTURE_MAX" type="float" default="11.0">
+        <parameter name="AE_APERTURE_MAX" iqp_id="1056" type="float" default="11.0">
             <description>AE Aperture Max</description>
             <options>
             </options>
         </parameter>
-        <parameter name="FOCUS_MODE" type="uint32" default="0">
+        <parameter name="FOCUS_MODE" iqp_id="1085" type="uint32" default="0"> 
             <description>Focus Mode</description>
             <options>
-                <option name="Manual" value="0">
+                <option name="Manual" value="0" test_name = 'Manual Focus'>
                     <exclusions>
                         <exclude>AF_MIN_DIST</exclude>
                         <exclude>AF_MAX_DIST</exclude>
@@ -103,23 +101,23 @@
                         <exclude>AF_STRATEGY_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Auto" value="1">
+                <option name="Auto" value="1" test_name = 'Auto Focus'>
                     <exclusions>
                         <exclude>FOCUS_DIST</exclude>
                     </exclusions>
                 </option>
             </options>
         </parameter>
-        <parameter name="FOCUS_DIST" type="float" default="0.0">
-            <description>Focus Distance [m]</description>
+        <parameter name="FOCUS_DIST" iqp_id="1033" type="float" default="0.0" Min="3.0" Max="100.0"> 
+            <description>Focus Distance [3 - 1e+06] [m]</description>
         </parameter>
-        <parameter name="AF_MIN_DIST" type="float" default="0.0">
-            <description>Auto Focus Min Distance [m]</description>
+        <parameter name="AF_MIN_DIST" iqp_id="1086" type="float" default="0.0" Min="3.0" Max="180.0">
+            <description>Auto Focus Min Distance [3 - 180] [m]</description>
         </parameter>
-        <parameter name="AF_MAX_DIST" type="float" default="0.0">
-            <description>Auto Focus Max Distance [m]</description>
+        <parameter name="AF_MAX_DIST" iqp_id="1087" type="float" default="0.0" Min="3.0" Max="180.0">
+            <description>Auto Focus Max Distance [3 - 180] [m]</description>
         </parameter>
-        <parameter name="AF_STRATEGY" type="uint32" default="0">
+        <parameter name="AF_STRATEGY" iqp_id="1507" type="uint32" default="0">
             <description>Focus Limit Control</description>
             <options>
                 <option name="Clip Distance" value="0">
@@ -132,13 +130,13 @@
                         <exclude>AF_STRATEGY_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Relative Distance" value="2"/>
+                <option name="Relative Distance" value="2" test_name = 'Thin Structures'/>
             </options>
         </parameter>
-        <parameter name="AF_STRATEGY_THR" type="float" default="5.0">
-            <description>Relative Change Threshold [m]</description>
+        <parameter name="AF_STRATEGY_THR" iqp_id="1508" type="float" default="5.0" Min="0.0" Max="180.0">
+            <description>Relative Change Threshold [0 - 180] [m]</description>
         </parameter>
-        <parameter name="CAPTURE_MODE" type="uint32" default="0">
+        <parameter name="CAPTURE_MODE" iqp_id="1500" type="uint32" default="0">
             <description>Auto Capture Mode</description>
             <options>
                 <option name="Off" value="0">
@@ -154,7 +152,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Horiontal Distance Interval" value="1">
+                <option name="Horiontal Distance Interval" value="1" test_name = "Horizontal Distance">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -166,7 +164,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Vertical Distance Interval" value="2">
+                <option name="Vertical Distance Interval" value="2" test_name = "Vertical Distance">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -178,7 +176,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="3D Distance Interval" value="3">
+                <option name="3D Distance Interval" value="3" test_name = '3D Distance'>
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -190,7 +188,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Time Interval" value="4">
+                <option name="Time Interval" value="4" test_name="Timelapse">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
@@ -202,7 +200,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Manual Focus Bracketing" value="5">
+                <option name="Manual Focus Bracketing" value="5" test_name="Focus Bracketing Manual">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
@@ -212,7 +210,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Automatic Focus Bracketing" value="6">
+                <option name="Automatic Focus Bracketing" value="6" test_name="Focus Bracketing Auto">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
@@ -221,7 +219,7 @@
                         <exclude>CAPTURE_COUNT</exclude>
                     </exclusions>
                 </option>
-                <option name="Burst Mode" value="7">
+                <option name="Burst Mode" value="7" test_name = 'Burst'>
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
@@ -235,41 +233,42 @@
                 </option>
             </options>
         </parameter>
-        <parameter name="DIST_INTERVAL" type="float" default="5.0">
-            <description> - Distance Interval [m]</description>
+        <parameter name="DIST_INTERVAL" iqp_id="1503" type="float" default="5.0" Min="0.0" Max="1000.0">
+            <description> - Distance Interval [0 - 1e+06] [m]</description>
         </parameter>
-        <parameter name="TIME_INTERVAL" type="float" default="3.0">
-            <description> - Time Interval [s]</description>
+        <parameter name="TIME_INTERVAL" iqp_id="1501" type="float" default="3.0" Min="0.0" Max="3600.0">
+            <description> - Time Interval [0 - 3.6e+06] [s]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_MODE" type="uint8" default="1">
+        <parameter name="FOCUS_BKT_MODE" iqp_id="1283" type="uint8" default="1">
             <description> - Bracketing Mode</description>
             <options>
                 <option name="Around Focus Point"   value="0" />
-                <option name="In Front Focus Point" value="1" />
+                <option name="In Front Of Focus Point" value="1" />
                 <option name="Behind Focus Point"   value="2" />
             </options>
         </parameter>
-        <parameter name="FOCUS_BKT_CNT" type="uint32" default="5">
-            <description> - Bracketing Capture Count</description>
+        <parameter name="FOCUS_BKT_CNT" iqp_id="1281" type="uint32" default="5" Min="2" Max="50">
+            <description> - Bracketing Capture Count [2 - 50]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_STEP" type="uint32" default="20">
-            <description> - Bracketing Step</description>
+        <parameter name="FOCUS_BKT_STEP" iqp_id="1282" type="uint32" default="20" Min="1" Max="200">
+            <description> - Bracketing Step [1 - 200]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_COC" type="uint32" default="3">
-            <description> - Circle of Confusion [pixels]</description>
+        <parameter name="FOCUS_BKT_COC" iqp_id="1284" type="uint32" default="3" Min="1" Max="10">
+            <description> - Circle of Confusion [1 - 10] [pixels]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_OVRLP" type="uint32" default="20">
-            <description> - Overlap Between Images [%]</description>
+        <parameter name="FOCUS_BKT_OVRLP" iqp_id="1285" type="uint32" default="20" Min="10" Max="90">
+            <description> - Overlap Between Images [10 - 90] [%]</description>
         </parameter>
-        <parameter name="FOCUS_BKT_DEPTH" type="float" default="10">
-            <description> - Object Depth [m]</description>
+        <parameter name="FOCUS_BKT_DEPTH" iqp_id="1286" type="float" default="10" Min="1.0" Max="100.0">
+            <description> - Object Depth [1 - 100] [m]</description>
         </parameter>
-        <parameter name="CAPTURE_COUNT" type="uint32" default="10">
-            <description> - Burst Capture Count</description>
+        <parameter name="CAPTURE_COUNT" iqp_id="1491" type="uint32" default="10" Min="1" Max="10">
+            <description> - Burst Capture Count [1 - 10] </description>
         </parameter>
-        <parameter name="HDMI_LV" type="uint8" default="1">
+        <parameter name="HDMI_LV" iqp_id="1220" type="uint8" default="1">
             <description>HDMI Live View</description>
             <options>
+                <option name="Enable" value="1" />
                 <option name="Disable" value="0">
                     <exclusions>
                         <exclude>HDMI_LV_ZOOM</exclude>
@@ -280,47 +279,45 @@
                         <exclude>PREVIEW_TIME</exclude>
                     </exclusions>
                 </option>
-                <option name="Enable"  value="1" />
             </options>
         </parameter>
-        <parameter name="HDMI_LV_ZOOM" type="uint8" default="0">
+        <parameter name="HDMI_LV_ZOOM" iqp_id="1248" type="uint8" default="0">
             <description> - HDMI LiveView Zoom</description>
             <options>
                 <option name="Overview" value="0" />
-                <option name="100%"  value="1" />
+                <option name="10"  value="1" test_name = '100%'/>
             </options>
         </parameter>
-        <parameter name="HDMI_OVERLAY" type="uint8" default="1">
+        <parameter name="HDMI_OVERLAY" iqp_id="1244" type="uint8" default="1">
             <description> - Overlay Layout</description>
             <options>
-                <option name="None" value="0">
-                </option>
-                <option name="West"  value="4" />
-                <option name="South"  value="5" />
+                <option name="Off" value="0" test_name="Standard" />
+                <option name="West"  value="4" test_name = 'DJI M300' />
+                <option name="South"  value="5" test_name = 'MavLink QGC'/>
             </options>
         </parameter>
-        <parameter name="OVERLAY_TRANSP" type="uint8" default="127">
-            <description> - Overlay Transparency</description>
+        <parameter name="OVERLAY_TRANSP" iqp_id="1245" type="uint8" default="127" Min="0" Max="255">
+            <description> - Overlay Transparency [0 - 255]</description>
         </parameter>
-        <parameter name="FOCUS_POINT" type="uint8" default="1">
+        <parameter name="FOCUS_POINT" iqp_id="1249" type="uint8" default="1">
             <description> - Overlay Focus Point</description>
             <options>
                 <option name="Disable" value="0" />
                 <option name="Enable"  value="1" />
             </options>
         </parameter>
-        <parameter name="OVERLAY_PREVIEW" type="uint8" default="1">
+        <parameter name="OVERLAY_PREVIEW" iqp_id="1241" type="uint8" default="1">
             <description> - Overlay Preview</description>
             <options>
-                <option name="Off"   value="0" />
+                <option name="Off" value="0" test_name="Disable" />
                 <option name="Small" value="1" />
                 <option name="Large" value="4" />
             </options>
         </parameter>
-        <parameter name="PREVIEW_TIME" type="uint32" default="0">
+        <parameter name="PREVIEW_TIME" iqp_id="1246" type="uint32" default="0">
             <description> - Overlay Preview Time</description>
             <options>
-                <option name="No Timeout" value="0" />
+                <option name="No timeout" value="0" />
                 <option name="2s"         value="2000" />
                 <option name="4s"         value="4000" />
                 <option name="6s"         value="6000" />
@@ -329,52 +326,52 @@
                 <option name="30s"        value="30000" />
             </options>
         </parameter>
-        <parameter name="FOCUS_MASK" type="uint8" default="1">
+        <parameter name="FOCUS_MASK" iqp_id="1312" type="uint8" default="1">
             <description>Focus Peaking</description>
             <options>
+                <option name="Enable"  value="1" />
                 <option name="Disable" value="0">
                     <exclusions>
                         <exclude>FOCUS_MASK_THR</exclude>
                     </exclusions>
                 </option>
-                <option name="Enable"  value="1" />
             </options>
         </parameter>
-        <parameter name="FOCUS_MASK_THR" type="uint32" default="500">
-            <description> - Focus Peaking Threshold</description>
+        <parameter name="FOCUS_MASK_THR" iqp_id="1313" type="uint32" default="500" Min="200" Max="900">
+            <description> - Focus Peaking Threshold [200 - 900]</description>
         </parameter>
-        <parameter name="NEW_FOLDER" type="uint8" default="0">
+        <parameter name="NEW_FOLDER" iqp_id="xxx" type="uint8" default="0">
             <description>New Folder</description>
             <options>
                 <option name="None" value="0" />
                 <option name="Create"  value="1" />
             </options>
         </parameter>
-        <parameter name="STORAGE_FORMAT" type="uint8" default="0">
+        <parameter name="STORAGE_FORMAT" iqp_id="1242" type="uint8" default="0">
             <description>Storage</description>
             <options>
                 <option name="None" value="0" />
                 <option name="Format"  value="1" />
             </options>
         </parameter>
-        <parameter name="MASS_STORAGE" type="uint8" default="0">
+        <parameter name="MASS_STORAGE" iqp_id="1340" type="uint8" default="0">
             <description>Mass Storage</description>
             <options>
-                <option name="Disable" value="0" />
-                <option name="Enable"  value="1" />
+                <option name="Disable" value="0" test_name = 'None' />
+                <option name="Enable"  value="1" test_name = "XQD/CFX ReadOnly" />
             </options>
         </parameter>
-        <parameter name="CUSTOM_INFO" type="custom" default="">
+        <parameter name="CUSTOM_INFO" iqp_id="237" type="custom" default="">
             <description>Custom Information</description>
         </parameter>
-        <parameter name="LEVER_ARM_FRONT" type="float" default="0.0">
-            <description>Camera Lever Arm Front [mm]</description>
+        <parameter name="LEVER_ARM_FRONT" iqp_id="1504" type="float" default="0.0" Min="0.0" Max="10000.0">
+            <description>Camera Lever Arm Front [0 - 10000] [mm]</description>
         </parameter>
-        <parameter name="LEVER_ARM_RIGHT" type="float" default="0.0">
-            <description>Camera Lever Arm Right [mm]</description>
+        <parameter name="LEVER_ARM_RIGHT" iqp_id="1505" type="float" default="0.0" Min="0.0" Max="10000.0">
+            <description>Camera Lever Arm Right [0 - 10000] [mm]</description>
         </parameter>
-        <parameter name="LEVER_ARM_UP" type="float" default="0.0">
-            <description>Camera Lever Arm Up [mm]</description>
+        <parameter name="LEVER_ARM_UP" iqp_id="1506" type="float" default="0.0" Min="0.0" Max="10000.0">
+            <description>Camera Lever Arm Up [0 - 10000] [mm]</description>
         </parameter>
     </parameters>
 </mavlinkcamera>

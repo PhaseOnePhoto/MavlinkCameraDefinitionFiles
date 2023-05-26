@@ -30,7 +30,7 @@ from utilities import *
 
 
 def main():
-    version = '27'
+    version = '29'
 
     build_ixm_50(version)
     build_ixm_100(version)
@@ -44,6 +44,9 @@ def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
 
     set_text(template, './definition/model', model)
     set_text(template, './definition/vendor', vendor)
+
+    options_SHT_MODE = get_options('options_shutter_mode.xml')
+    copy_options(template, 'SHUTTER_MODE', options_SHT_MODE)
 
     options_iso = get_options('options_iso.xml')
 
@@ -83,6 +86,9 @@ def build_ixm_100(version='26', model='iXM-100', vendor='PhaseOne'):
     set_text(template, './definition/model', model)
     set_text(template, './definition/vendor', vendor)
 
+    options_SHT_MODE = get_options('options_shutter_mode.xml')
+    copy_options(template, 'SHUTTER_MODE', options_SHT_MODE)
+
     options_iso = get_options('options_iso.xml')
 
     limit_options(options_iso, 50, 6400)
@@ -121,6 +127,9 @@ def build_ixm_100_achromatic(version='26', model='iXM-100_Achromatic', vendor='P
     set_text(template, './definition/model', model)
     set_text(template, './definition/vendor', vendor)
 
+    options_SHT_MODE = get_options('options_shutter_mode.xml')
+    copy_options(template, 'SHUTTER_MODE', options_SHT_MODE)
+
     options_iso = get_options('options_iso.xml')
 
     limit_options(options_iso, 200, 25600)
@@ -158,7 +167,10 @@ def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
 
     set_text(template, './definition/model', model)
     set_text(template, './definition/vendor', vendor)
-
+    
+    options_SHT_MODE = get_options('options_shutter_mode_GS.xml')
+    copy_options(template, 'SHUTTER_MODE', options_SHT_MODE)
+    
     options_iso = get_options('options_iso.xml')
 
     limit_options(options_iso, 200, 6400)
