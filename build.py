@@ -30,7 +30,7 @@ from utilities import *
 
 
 def main():
-    version = '29'
+    version = '30'
 
     build_ixm_50(version)
     build_ixm_100(version)
