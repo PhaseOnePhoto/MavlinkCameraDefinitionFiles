@@ -451,7 +451,8 @@
       <DisplayName>Overlay Focus Point</DisplayName>
       <Description>Overlay Focus Point</Description>
       <Values>0: Disabled,
-1: Enabled</Values>
+1: Without LRF
+2: With LRF</Values>
       <User>Standard</User>
     </FOCUS_POINT>
     <OVERLAY_PREVIEW>
