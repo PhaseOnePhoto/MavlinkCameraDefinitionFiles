@@ -36,6 +36,7 @@ def main():
     build_ixm_100(version)
     build_ixm_100_achromatic(version)
     build_ixm_gs120(version)
+    build_p5_gs128()
 
 def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
     template = get_template('template.xml')
@@ -189,6 +190,81 @@ def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
     remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
 
     write_file(template, version, model, vendor)
+
+def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
+    template = get_template('template.xml')
+
+    set_attribute(template, './definition', 'version', version)
+
+    set_text(template, './definition/model', model)
+    set_text(template, './definition/vendor', vendor)
+
+    options_iso = get_options('options_iso.xml')
+
+    limit_options(options_iso, 200, 6400)
+
+    copy_options(template, 'CAM_ISO', options_iso)
+    copy_options(template, 'AE_ISO_MIN', options_iso)
+    copy_options(template, 'AE_ISO_MAX', options_iso)
+
+    options_aperture = get_options('options_aperture.xml')
+
+    copy_options(template, 'CAM_APERTURE', options_aperture)
+    copy_options(template, 'AE_APERTURE_MIN', options_aperture)
+    copy_options(template, 'AE_APERTURE_MAX', options_aperture)
+
+    options_shutter_speed = get_options('options_shutter_speed.xml')
+
+    limit_options(options_shutter_speed, -1000, 16000)
+
+    copy_options(template, 'CAM_SHUTTERSPD', options_shutter_speed)
+    copy_options(template, 'AE_SH_SPD_MIN', options_shutter_speed)
+    copy_options(template, 'AE_SH_SPD_MAX', options_shutter_speed)
+
+    exposure_value = get_options('options_exposure_value.xml')
+
+    copy_options(template, 'CAM_EV', exposure_value)
+
+    remove_exclude(template, 'CAM_EXPMODE', 'Manual', 'SHUTTER_MODE')
+    remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
+
+    remove_option(template, 'SHUTTER_MODE', 'Fusion Shutter')
+    remove_parameter(template, 'FOCUS_MODE')
+    remove_parameter(template, 'FOCUS_DIST')
+    remove_parameter(template, 'AF_MIN_DIST')
+    remove_parameter(template, 'AF_MAX_DIST')
+    remove_parameter(template, 'AF_STRATEGY')
+    remove_parameter(template, 'AF_STRATEGY_THR')
+    
+    remove_option(template, 'CAPTURE_MODE', 'Manual Focus Bracketing')
+    remove_option(template, 'CAPTURE_MODE', 'Automatic Focus Bracketing')
+    remove_option(template, 'CAPTURE_MODE', 'Laser')
+    remove_option(template, 'CAPTURE_MODE', 'Timed Laser')
+    
+    remove_parameter(template, 'FOCUS_BKT_MODE')
+    remove_parameter(template, 'FOCUS_BKT_CNT')
+    remove_parameter(template, 'FOCUS_BKT_STEP')
+    remove_parameter(template, 'FOCUS_BKT_COC')
+    remove_parameter(template, 'FOCUS_BKT_OVRLP')
+    remove_parameter(template, 'FOCUS_BKT_DEPTH')
+    remove_parameter(template, 'LASER_CAP_CNT')
+    remove_parameter(template, 'LASER_CORR')
+    remove_parameter(template, 'HDMI_LV')
+    remove_parameter(template, 'HDMI_LV_ZOOM')
+    remove_parameter(template, 'HDMI_OVERLAY')
+    
+    remove_parameter(template, 'OVERLAY_TRANSP')
+    remove_parameter(template, 'FOCUS_POINT')
+    remove_parameter(template, 'OVERLAY_PREVIEW')
+    remove_parameter(template, 'PREVIEW_TIME')
+    remove_parameter(template, 'FOCUS_MASK')
+    remove_parameter(template, 'FOCUS_MASK_THR')
+    
+    remove_parameter(template, 'CAM_ORIENT')
+    remove_parameter(template, 'GMB_CMD')
+    
+    write_file(template, version, model, vendor)
+
 
 if __name__ == '__main__':
     main()

@@ -51,6 +51,11 @@ def remove_exclude(template : ElementTree, parameter : str, option : str, exclud
     e2 = e1.find(f'./exclude[.="{exclude}"]')
     e1.remove(e2)
 
+def remove_parameter(template : ElementTree, parameter : str):
+    e1 = template.find(f'./parameters')
+    e2 = e1.find(f'./parameter[@name="{parameter}"]')
+    e1.remove(e2)
+
 def write_file(template : ElementTree, version : str, model : str, vendor : str):
     ElementTree.indent(template, '    ')
 
