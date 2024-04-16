@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mavlinkcamera>
-    <definition version="01">
+    <definition version="32">
         <model>P5-GS128</model>
         <vendor>PhaseOne</vendor>
     </definition>
@@ -20,12 +20,6 @@
                         <exclude>CAM_SHUTTERSPD</exclude>
                     </exclusions>
                 </option>
-            </options>
-        </parameter>
-        <parameter name="SHUTTER_MODE" type="uint32" default="1">
-            <description>Shutter Mode</description>
-            <options>
-                <option name="Electronic Shutter" value="1" />
             </options>
         </parameter>
         <parameter name="CAM_ISO" type="uint32" default="200">
@@ -398,20 +392,6 @@
                         <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
-                <option name="Burst Mode" value="7">
-                    <exclusions>
-                        <exclude>DIST_INTERVAL</exclude>
-                        <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
-                        <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
-                        <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
-                        <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
-                    </exclusions>
-                </option>
             </options>
         </parameter>
         <parameter name="DIST_INTERVAL" type="float" default="5.0">
@@ -436,16 +416,6 @@
                 <option name="None" value="0" />
                 <option name="Format" value="1" />
             </options>
-        </parameter>
-        <parameter name="MASS_STORAGE" type="uint8" default="0">
-            <description>Mass Storage</description>
-            <options>
-                <option name="Disable" value="0" />
-                <option name="Enable" value="1" />
-            </options>
-        </parameter>
-        <parameter name="CUSTOM_INFO" type="custom" default="">
-            <description>Custom Information</description>
         </parameter>
     </parameters>
 </mavlinkcamera>

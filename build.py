@@ -36,7 +36,7 @@ def main():
     build_ixm_100(version)
     build_ixm_100_achromatic(version)
     build_ixm_gs120(version)
-    build_p5_gs128()
+    build_p5_gs128('32')
 
 def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
     template = get_template('template.xml')
@@ -227,8 +227,8 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
 
     remove_exclude(template, 'CAM_EXPMODE', 'Manual', 'SHUTTER_MODE')
     remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
+    remove_parameter(template, 'SHUTTER_MODE')
 
-    remove_option(template, 'SHUTTER_MODE', 'Fusion Shutter')
     remove_parameter(template, 'FOCUS_MODE')
     remove_parameter(template, 'FOCUS_DIST')
     remove_parameter(template, 'AF_MIN_DIST')
@@ -240,6 +240,7 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     remove_option(template, 'CAPTURE_MODE', 'Automatic Focus Bracketing')
     remove_option(template, 'CAPTURE_MODE', 'Laser')
     remove_option(template, 'CAPTURE_MODE', 'Timed Laser')
+    remove_option(template, 'CAPTURE_MODE', 'Burst Mode')
     
     remove_parameter(template, 'FOCUS_BKT_MODE')
     remove_parameter(template, 'FOCUS_BKT_CNT')
@@ -259,6 +260,10 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     remove_parameter(template, 'PREVIEW_TIME')
     remove_parameter(template, 'FOCUS_MASK')
     remove_parameter(template, 'FOCUS_MASK_THR')
+    remove_parameter(template, 'MASS_STORAGE')
+    remove_parameter(template, 'CUSTOM_INFO')
+    
+    
     
     remove_parameter(template, 'CAM_ORIENT')
     remove_parameter(template, 'GMB_CMD')
