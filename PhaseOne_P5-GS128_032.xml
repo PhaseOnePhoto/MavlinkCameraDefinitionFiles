@@ -417,5 +417,8 @@
                 <option name="Format" value="1" />
             </options>
         </parameter>
+        <parameter name="CUSTOM_INFO" type="custom" default="">
+            <description>Custom Information</description>
+        </parameter>
     </parameters>
 </mavlinkcamera>

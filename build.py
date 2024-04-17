@@ -260,10 +260,7 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     remove_parameter(template, 'PREVIEW_TIME')
     remove_parameter(template, 'FOCUS_MASK')
     remove_parameter(template, 'FOCUS_MASK_THR')
-    remove_parameter(template, 'MASS_STORAGE')
-    remove_parameter(template, 'CUSTOM_INFO')
-    
-    
+    remove_parameter(template, 'MASS_STORAGE')  
     
     remove_parameter(template, 'CAM_ORIENT')
     remove_parameter(template, 'GMB_CMD')
