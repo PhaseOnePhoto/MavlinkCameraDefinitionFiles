@@ -430,7 +430,9 @@
       <DisplayName>HDMI Overlay</DisplayName>
       <Description>HDMI Overlay</Description>
       <Values>0: Disabled,
-1: Enabled</Values>
+      4: Left with Margin,
+      5: Bottom,
+      6: Left</Values>
       <User>Standard</User>
     </HDMI_OVERLAY>
     <OVERLAY_TRANSP>
@@ -594,6 +596,11 @@
       <Description>Requested Rate of Attitude Message from Autopilot</Description>
       <User>Standard</User>
     </GMB_AT_MSG_RATE>
+    <GPS_RAW_MSG_RATE>
+      <DisplayName>Requested Rate of Raw GPS Message from Autopilot</DisplayName>
+      <Description>Requested Rate of Raw GPS Message from Autopilot</Description>
+      <User>Standard</User>
+    </GPS_RAW_MSG_RATE>
     <LRF_FREQUENCY>
       <DisplayName>Frequency of Laser Range Finder Measurements</DisplayName>
       <Description>Frequency of Laser Range Finder Measurements</Description>

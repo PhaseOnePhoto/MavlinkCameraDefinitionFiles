@@ -361,15 +361,17 @@ user="Standard")
 add(e, 
 name="HDMI_LV",
 disp="HDMI Live View",
-val="""0: Disabled,
+val="""0: Disable,
 1: Enabled""",
 user="Standard")
 
 add(e, 
 name="HDMI_OVERLAY",
 disp="HDMI Overlay",
-val="""0: Disabled,
-1: Enabled""",
+val="""0: Disable,
+4: Left with Margin,
+5: Bottom,
+6: Left""",
 user="Standard")
 
 add(e, 
@@ -389,8 +391,9 @@ user="Standard")
 add(e, 
 name="FOCUS_POINT",
 disp="Overlay Focus Point",
-val="""0: Disabled,
-1: Enabled""",
+val="""0: Disable,
+1: Without LRF,
+2: With LRF""",
 user="Standard")
 
 add(e, 
@@ -416,7 +419,7 @@ user="Standard")
 add(e, 
 name="FOCUS_MASK",
 disp="Focus Mask",
-val="""0: Disabled,
+val="""0: Disable,
 1: Enabled""",
 user="Standard")
 
@@ -542,6 +545,11 @@ disp="Requested Rate of Attitude Message from Autopilot",
 user="Standard")
 
 add(e, 
+name="GPS_RAW_MSG_RATE",
+disp="Requested Rate of Raw GPS Message from Autopilot",
+user="Standard")
+
+add(e, 
 name="LRF_FREQUENCY",
 disp="Frequency of Laser Range Finder Measurements",
 rng="0 100",
@@ -550,7 +558,7 @@ user="Standard")
 add(e, 
 name="LRF_FORWARD",
 disp="Enable Forwarding of Laser Range Finder Measurements to Ground Station",
-val="""0: Disabled,
+val="""0: Disable,
 1: Enabled""",
 user="Standard")
 
