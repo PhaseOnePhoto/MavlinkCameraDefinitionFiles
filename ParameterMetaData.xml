@@ -465,6 +465,13 @@
 4: Large</Values>
       <User>Standard</User>
     </OVERLAY_PREVIEW>
+    <OVERLAY_CAP_FDBK>
+      <DisplayName>Overlay Capture Feedback</DisplayName>
+      <Description>Overlay Capture Feedback</Description>
+      <Values>0: Disable,
+1: Enable,
+      <User>Standard</User>
+    </OVERLAY_CAP_FDBK>
     <PREVIEW_TIME>
       <DisplayName>Overlay Preview Time</DisplayName>
       <Description>Overlay Preview Time</Description>

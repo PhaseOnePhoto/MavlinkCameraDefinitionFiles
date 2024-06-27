@@ -578,6 +578,13 @@
                 <option name="Large" value="4" />
             </options>
         </parameter>
+        <parameter name="OVERLAY_CAP_FDBK" type="uint8" default="1">
+            <description> - Overlay Capture Feedback</description>
+            <options>
+                <option name="Disable" value="0" />
+                <option name="Enable" value="1" />
+            </options>
+        </parameter>
         <parameter name="PREVIEW_TIME" type="uint32" default="0">
             <description> - Overlay Preview Time</description>
             <options>

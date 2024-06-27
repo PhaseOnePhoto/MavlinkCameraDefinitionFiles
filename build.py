@@ -257,6 +257,7 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     remove_parameter(template, 'OVERLAY_TRANSP')
     remove_parameter(template, 'FOCUS_POINT')
     remove_parameter(template, 'OVERLAY_PREVIEW')
+    remove_parameter(template, 'OVERLAY_CAP_FDBK')
     remove_parameter(template, 'PREVIEW_TIME')
     remove_parameter(template, 'FOCUS_MASK')
     remove_parameter(template, 'FOCUS_MASK_THR')
@@ -264,6 +265,7 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     
     remove_parameter(template, 'CAM_ORIENT')
     remove_parameter(template, 'GMB_CMD')
+    remove_parameter(template, 'GPS_RAW_MSG_RATE')
     
     write_file(template, version, model, vendor)
 
