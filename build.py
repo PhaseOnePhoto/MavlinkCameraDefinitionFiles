@@ -265,7 +265,6 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     
     remove_parameter(template, 'CAM_ORIENT')
     remove_parameter(template, 'GMB_CMD')
-    remove_parameter(template, 'GPS_RAW_MSG_RATE')
     
     write_file(template, version, model, vendor)
 

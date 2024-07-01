@@ -623,9 +623,6 @@
                 <option name="Enable" value="1" />
             </options>
         </parameter>
-        <parameter name="GPS_RAW_MSG_RATE" type="uint8" default="10">
-            <description>GPS raw message rate</description>
-        </parameter>
         <parameter name="CUSTOM_INFO" type="custom" default="">
             <description>Custom Information</description>
         </parameter>
