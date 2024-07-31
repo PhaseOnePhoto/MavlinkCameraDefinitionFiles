@@ -387,7 +387,7 @@
                         <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
-                <option name="Horiontal Distance Interval" value="1">
+                <option name="Horizontal Distance Interval" value="1">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
                         <exclude>FOCUS_BKT_MODE</exclude>
