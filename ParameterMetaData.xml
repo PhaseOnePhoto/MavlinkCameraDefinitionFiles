@@ -430,9 +430,9 @@
       <DisplayName>HDMI Overlay</DisplayName>
       <Description>HDMI Overlay</Description>
       <Values>0: Disabled,
-      4: Left with Margin,
-      5: Bottom,
-      6: Left</Values>
+4: Left with Margin,
+5: Bottom,
+6: Left</Values>
       <User>Standard</User>
     </HDMI_OVERLAY>
     <OVERLAY_TRANSP>
@@ -453,7 +453,7 @@
       <DisplayName>Overlay Focus Point</DisplayName>
       <Description>Overlay Focus Point</Description>
       <Values>0: Disabled,
-1: Without LRF
+1: Without LRF,
 2: With LRF</Values>
       <User>Standard</User>
     </FOCUS_POINT>
@@ -468,8 +468,8 @@
     <OVERLAY_CAP_FDBK>
       <DisplayName>Overlay Capture Feedback</DisplayName>
       <Description>Overlay Capture Feedback</Description>
-      <Values>0: Disable,
-1: Enable,
+      <Values>0: Disabled,
+1: Enabled</Values>
       <User>Standard</User>
     </OVERLAY_CAP_FDBK>
     <PREVIEW_TIME>

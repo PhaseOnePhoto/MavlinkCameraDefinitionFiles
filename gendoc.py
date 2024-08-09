@@ -361,14 +361,14 @@ user="Standard")
 add(e, 
 name="HDMI_LV",
 disp="HDMI Live View",
-val="""0: Disable,
+val="""0: Disabled,
 1: Enabled""",
 user="Standard")
 
 add(e, 
 name="HDMI_OVERLAY",
 disp="HDMI Overlay",
-val="""0: Disable,
+val="""0: Disabled,
 4: Left with Margin,
 5: Bottom,
 6: Left""",
@@ -391,7 +391,7 @@ user="Standard")
 add(e, 
 name="FOCUS_POINT",
 disp="Overlay Focus Point",
-val="""0: Disable,
+val="""0: Disabled,
 1: Without LRF,
 2: With LRF""",
 user="Standard")
@@ -402,6 +402,13 @@ disp="Overlay Preview",
 val="""0: Off,
 1: Small,
 4: Large""",
+user="Standard")
+
+add(e, 
+name="OVERLAY_CAP_FDBK",
+disp="Overlay Capture Feedback",
+val="""0: Disabled,
+1: Enabled""",
 user="Standard")
 
 add(e, 
@@ -419,7 +426,7 @@ user="Standard")
 add(e, 
 name="FOCUS_MASK",
 disp="Focus Mask",
-val="""0: Disable,
+val="""0: Disabled,
 1: Enabled""",
 user="Standard")
 
@@ -558,7 +565,7 @@ user="Standard")
 add(e, 
 name="LRF_FORWARD",
 disp="Enable Forwarding of Laser Range Finder Measurements to Ground Station",
-val="""0: Disable,
+val="""0: Disabled,
 1: Enabled""",
 user="Standard")
 
