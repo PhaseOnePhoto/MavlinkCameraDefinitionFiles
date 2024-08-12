@@ -384,13 +384,13 @@
 2: Behind focus point</Values>
       <User>Standard</User>
     </FOCUS_BKT_MODE>
-    <FOCUS_BKT_COUNT>
+    <FOCUS_BKT_CNT>
       <DisplayName>Focus Bracketing Capture Count</DisplayName>
       <Description>Focus Bracketing Capture Count</Description>
       <Range>1 100</Range>
       <Increment>1</Increment>
       <User>Standard</User>
-    </FOCUS_BKT_COUNT>
+    </FOCUS_BKT_CNT>
     <FOCUS_BKT_STEP>
       <DisplayName>Focus Bracketing Motor Step Count</DisplayName>
       <Description>Focus Bracketing Motor Step Count</Description>
@@ -526,18 +526,21 @@
       <User>Standard</User>
     </CUSTOM_INFO>
     <LEVER_ARM_FRONT>
-      <DisplayName>Camera Lever Arm Front</DisplayName>
-      <Description>X coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <DisplayName>Camera Lever Arm Front [mm]</DisplayName>
+      <Description>X coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <Range>-10000 10000</Range>
       <User>Standard</User>
     </LEVER_ARM_FRONT>
     <LEVER_ARM_RIGHT>
-      <DisplayName>Camera Lever Arm Right</DisplayName>
-      <Description>Y coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <DisplayName>Camera Lever Arm Right [mm]</DisplayName>
+      <Description>Y coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <Range>-10000 10000</Range>
       <User>Standard</User>
     </LEVER_ARM_RIGHT>
     <LEVER_ARM_UP>
-      <DisplayName>Camera Lever Arm Up</DisplayName>
-      <Description>Z coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <DisplayName>Camera Lever Arm Up [mm]</DisplayName>
+      <Description>Z coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)</Description>
+      <Range>-10000 10000</Range>
       <User>Standard</User>
     </LEVER_ARM_UP>
     <WHITE_BALANCE>
@@ -593,19 +596,29 @@
       <Description>Number of Gimbal Parameters (Read Only)</Description>
       <User>Standard</User>
     </GMB_PARAM_NUM>
+    <GMB_PARAM_FWD>
+      <DisplayName>Expose gimbal parameters as if they were camera parameters and forward read and write requests</DisplayName>
+      <Description>Expose gimbal parameters as if they were camera parameters and forward read and write requests</Description>
+      <Values>0: Disabled,
+1: Enabled</Values>
+      <User>Standard</User>
+    </GMB_PARAM_FWD>
     <GMB_AP_MSG_RATE>
       <DisplayName>Requested Rate of AUTOPILOT_STATE_FOR_GIMBAL_DEVICE Message from Autopilot</DisplayName>
       <Description>Requested Rate of AUTOPILOT_STATE_FOR_GIMBAL_DEVICE Message from Autopilot</Description>
+      <Range>0 100</Range>
       <User>Standard</User>
     </GMB_AP_MSG_RATE>
     <GMB_AT_MSG_RATE>
       <DisplayName>Requested Rate of Attitude Message from Autopilot</DisplayName>
       <Description>Requested Rate of Attitude Message from Autopilot</Description>
+      <Range>0 100</Range>
       <User>Standard</User>
     </GMB_AT_MSG_RATE>
     <GPS_RAW_MSG_RATE>
       <DisplayName>Requested Rate of Raw GPS Message from Autopilot</DisplayName>
       <Description>Requested Rate of Raw GPS Message from Autopilot</Description>
+      <Range>0 100</Range>
       <User>Standard</User>
     </GPS_RAW_MSG_RATE>
     <LRF_FREQUENCY>
@@ -633,13 +646,28 @@
       <Range>0 40</Range>
       <User>Standard</User>
     </LRF_ORIENTATION>
-    <GMB_REBOOT>
-      <DisplayName>Reboot Gimbal</DisplayName>
-      <Description>Reboot Gimbal</Description>
-      <Values>0: None,
-1: Reboot</Values>
+    <LASER_CAP_CNT>
+      <DisplayName>Capture count when CAPTURE_MODE is set to 'Laser'</DisplayName>
+      <Description>Capture count when CAPTURE_MODE is set to 'Laser'</Description>
+      <Range>1 100</Range>
       <User>Standard</User>
-    </GMB_REBOOT>
+    </LASER_CAP_CNT>
+    <LASER_CORR>
+      <DisplayName>Delay in milliseconds (lead time if negative) added to scheduled capture time when CAPTURE_MODE is set to 'Timed Laser'</DisplayName>
+      <Description>Delay in milliseconds (lead time if negative) added to scheduled capture time when CAPTURE_MODE is set to 'Timed Laser'</Description>
+      <Range>-1000 1000</Range>
+      <User>Standard</User>
+    </LASER_CORR>
+    <GMB_CMD>
+      <DisplayName>Command addressed by the camera to the gimbal</DisplayName>
+      <Description>Command addressed by the camera to the gimbal</Description>
+      <Values>0: None,
+1: Calibrate Gyro,
+2: Turn on Motors,
+3: Turn off Motors,
+4: Reboot</Values>
+      <User>Standard</User>
+    </GMB_CMD>
     <GMB_PARAM_RESET>
       <DisplayName>Factory Reset of Gimbal Parameters</DisplayName>
       <Description>Factory Reset of Gimbal Parameters</Description>
@@ -648,25 +676,44 @@
       <User>Standard</User>
     </GMB_PARAM_RESET>
     <GMB_PARAM_BMP1>
-      <DisplayName>Bitmap for Gimbal Parameters Different than Default Value [0, 31]</DisplayName>
-      <Description>Bitmap for Gimbal Parameters Different than Default Value [0, 31]</Description>
+      <DisplayName>Bitmask for Gimbal Parameters Different than Default Value [0, 31]</DisplayName>
+      <Description>Bitmask for Gimbal Parameters Different than Default Value [0, 31]</Description>
+      <Range>0 4294967296</Range>
       <User>Standard</User>
     </GMB_PARAM_BMP1>
     <GMB_PARAM_BMP2>
-      <DisplayName>Bitmap for Gimbal Parameters Different than Default Value [32, 63]</DisplayName>
-      <Description>Bitmap for Gimbal Parameters Different than Default Value [32, 63]</Description>
+      <DisplayName>Bitmask for Gimbal Parameters Different than Default Value [32, 63]</DisplayName>
+      <Description>Bitmask for Gimbal Parameters Different than Default Value [32, 63]</Description>
+      <Range>0 4294967296</Range>
       <User>Standard</User>
     </GMB_PARAM_BMP2>
     <GMB_PARAM_BMP3>
-      <DisplayName>Bitmap for Gimbal Parameters Different than Default Value [64, 84]</DisplayName>
-      <Description>Bitmap for Gimbal Parameters Different than Default Value [64, 84]</Description>
+      <DisplayName>Bitmask for Gimbal Parameters Different than Default Value [64, 84]</DisplayName>
+      <Description>Bitmask for Gimbal Parameters Different than Default Value [64, 84]</Description>
+      <Range>0 4294967296</Range>
       <User>Standard</User>
     </GMB_PARAM_BMP3>
+    <CAM_ORIENT>
+      <DisplayName>Orientation for the video feed, image metadata and overlay preview</DisplayName>
+      <Description>Orientation for the video feed, image metadata and overlay preview</Description>
+      <Values>0: Horizontal,
+1: Vertical</Values>
+      <User>Standard</User>
+    </CAM_ORIENT>
     <CAM_PARAM_RFRSH>
       <DisplayName>Re-send List of Camera Parameters (Including Cached Gimbal Parameters) to Ground Station</DisplayName>
       <Description>Re-send List of Camera Parameters (Including Cached Gimbal Parameters) to Ground Station</Description>
+      <Values>0: None,
+1: Refresh</Values>
       <User>Standard</User>
     </CAM_PARAM_RFRSH>
+    <CAM_PARAM_RESET>
+      <DisplayName>Set List of Camera Parameters back to Default Values</DisplayName>
+      <Description>Set List of Camera Parameters back to Default Values</Description>
+      <Values>0: None,
+1: Reset</Values>
+      <User>Standard</User>
+    </CAM_PARAM_RESET>
     <VERSION_X>
       <DisplayName>X of Gimbal Firmware Version X.Y.Z</DisplayName>
       <Description>X of Gimbal Firmware Version X.Y.Z (Read Only)</Description>

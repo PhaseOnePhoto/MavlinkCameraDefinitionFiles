@@ -324,7 +324,7 @@ val="""0: Around focus point,
 user="Standard")
 
 add(e, 
-name="FOCUS_BKT_COUNT",
+name="FOCUS_BKT_CNT",
 disp="Focus Bracketing Capture Count",
 rng="1 100",
 inc="1",
@@ -470,20 +470,23 @@ user="Standard")
 
 add(e, 
 name="LEVER_ARM_FRONT",
-disp="Camera Lever Arm Front",
-desc="X coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)",
+disp="Camera Lever Arm Front [mm]",
+desc="X coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)",
+rng="-10000 10000",
 user="Standard")
 
 add(e, 
 name="LEVER_ARM_RIGHT",
-disp="Camera Lever Arm Right",
-desc="Y coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)",
+disp="Camera Lever Arm Right [mm]",
+desc="Y coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)",
+rng="-10000 10000",
 user="Standard")
 
 add(e, 
 name="LEVER_ARM_UP",
-disp="Camera Lever Arm Up",
-desc="Z coordinate of camera lever arm (from aircraft's center of gravity to gimbal's center of rotation)",
+disp="Camera Lever Arm Up [mm]",
+desc="Z coordinate of camera lever arm in millimeters (from aircraft's center of gravity to gimbal's center of rotation)",
+rng="-10000 10000",
 user="Standard")
 
 add(e, 
@@ -541,19 +544,29 @@ disp="Number of Gimbal Parameters",
 desc="Number of Gimbal Parameters (Read Only)",
 user="Standard")
 
+add(e,
+name="GMB_PARAM_FWD",
+disp="Expose gimbal parameters as if they were camera parameters and forward read and write requests",
+val="""0: Disabled,
+1: Enabled""",
+user="Standard")
+
 add(e, 
 name="GMB_AP_MSG_RATE",
 disp="Requested Rate of AUTOPILOT_STATE_FOR_GIMBAL_DEVICE Message from Autopilot",
+rng="0 100",
 user="Standard")
 
 add(e, 
 name="GMB_AT_MSG_RATE",
 disp="Requested Rate of Attitude Message from Autopilot",
+rng="0 100",
 user="Standard")
 
 add(e, 
 name="GPS_RAW_MSG_RATE",
 disp="Requested Rate of Raw GPS Message from Autopilot",
+rng="0 100",
 user="Standard")
 
 add(e, 
@@ -581,11 +594,26 @@ disp="ORIENTATION Field of DISTANCE_SENSOR Message when Forwarding Laser Rangefi
 rng="0 40",
 user="Standard")
 
+add(e,
+name="LASER_CAP_CNT",
+disp="Capture count when CAPTURE_MODE is set to 'Laser'",
+rng="1 100",
+user="Standard")
+
+add(e,
+name="LASER_CORR",
+disp="Delay in milliseconds (lead time if negative) added to scheduled capture time when CAPTURE_MODE is set to 'Timed Laser'",
+rng="-1000 1000",
+user="Standard")
+
 add(e, 
-name="GMB_REBOOT",
-disp="Reboot Gimbal",
+name="GMB_CMD",
+disp="Command addressed by the camera to the gimbal",
 val="""0: None,
-1: Reboot""",
+1: Calibrate Gyro,
+2: Turn on Motors,
+3: Turn off Motors,
+4: Reboot""",
 user="Standard")
 
 add(e,
@@ -597,22 +625,41 @@ user="Standard")
 
 add(e,
 name="GMB_PARAM_BMP1",
-disp="Bitmap for Gimbal Parameters Different than Default Value [0, 31]",
+disp="Bitmask for Gimbal Parameters Different than Default Value [0, 31]",
+rng="0 4294967296",
 user="Standard")
 
 add(e,
 name="GMB_PARAM_BMP2",
-disp="Bitmap for Gimbal Parameters Different than Default Value [32, 63]",
+disp="Bitmask for Gimbal Parameters Different than Default Value [32, 63]",
+rng="0 4294967296",
 user="Standard")
 
 add(e,
 name="GMB_PARAM_BMP3",
-disp="Bitmap for Gimbal Parameters Different than Default Value [64, 84]",
+disp="Bitmask for Gimbal Parameters Different than Default Value [64, 84]",
+rng="0 4294967296",
+user="Standard")
+
+add(e,
+name="CAM_ORIENT",
+disp="Orientation for the video feed, image metadata and overlay preview",
+val="""0: Horizontal,
+1: Vertical""",
 user="Standard")
 
 add(e,
 name="CAM_PARAM_RFRSH",
 disp="Re-send List of Camera Parameters (Including Cached Gimbal Parameters) to Ground Station",
+val="""0: None,
+1: Refresh""",
+user="Standard")
+
+add(e,
+name="CAM_PARAM_RESET",
+disp="Set List of Camera Parameters back to Default Values",
+val="""0: None,
+1: Reset""",
 user="Standard")
 
 add(e, 
