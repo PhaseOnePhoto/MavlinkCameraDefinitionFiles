@@ -74,6 +74,8 @@ def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
 
     remove_option(template, 'CAPTURE_MODE', 'Burst Mode')
 
+    prune_exclusions(template)
+
     write_file(template, version, model, vendor)
 
 def build_ixm_100(version='26', model='iXM-100', vendor='PhaseOne'):
@@ -111,6 +113,8 @@ def build_ixm_100(version='26', model='iXM-100', vendor='PhaseOne'):
     copy_options(template, 'CAM_EV', exposure_value)
 
     remove_option(template, 'CAPTURE_MODE', 'Burst Mode')
+
+    prune_exclusions(template)
 
     write_file(template, version, model, vendor)
 
@@ -150,6 +154,8 @@ def build_ixm_100_achromatic(version='26', model='iXM-100_Achromatic', vendor='P
 
     remove_option(template, 'CAPTURE_MODE', 'Burst Mode')
 
+    prune_exclusions(template)
+
     write_file(template, version, model, vendor)
 
 def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
@@ -186,8 +192,7 @@ def build_ixm_gs120(version='26', model='iXM-GS120', vendor='PhaseOne'):
 
     copy_options(template, 'CAM_EV', exposure_value)
 
-    remove_exclude(template, 'CAM_EXPMODE', 'Manual', 'SHUTTER_MODE')
-    remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
+    prune_exclusions(template)
 
     write_file(template, version, model, vendor)
 
@@ -225,8 +230,6 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
 
     copy_options(template, 'CAM_EV', exposure_value)
 
-    remove_exclude(template, 'CAM_EXPMODE', 'Manual', 'SHUTTER_MODE')
-    remove_exclude(template, 'CAM_EXPMODE', 'Auto', 'SHUTTER_MODE')
     remove_parameter(template, 'SHUTTER_MODE')
 
     remove_parameter(template, 'FOCUS_MODE')
@@ -267,6 +270,8 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     
     remove_parameter(template, 'CAM_ORIENT')
     remove_parameter(template, 'GMB_CMD')
+
+    prune_exclusions(template)
     
     write_file(template, version, model, vendor)
 

@@ -325,71 +325,46 @@
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
                         <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
                         <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>CAPTURE_COUNT</exclude>
                         <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
                 <option name="Horizontal Distance Interval" value="1">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
                         <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>CAPTURE_COUNT</exclude>
                         <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
                 <option name="Vertical Distance Interval" value="2">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
                         <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>CAPTURE_COUNT</exclude>
                         <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
                 <option name="3D Distance Interval" value="3">
                     <exclusions>
                         <exclude>TIME_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
                         <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>CAPTURE_COUNT</exclude>
                         <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
                 <option name="Time Interval" value="4">
                     <exclusions>
                         <exclude>DIST_INTERVAL</exclude>
-                        <exclude>FOCUS_BKT_MODE</exclude>
                         <exclude>FOCUS_BKT_CNT</exclude>
-                        <exclude>FOCUS_BKT_STEP</exclude>
                         <exclude>FOCUS_BKT_COC</exclude>
-                        <exclude>FOCUS_BKT_OVRLP</exclude>
                         <exclude>FOCUS_BKT_DEPTH</exclude>
-                        <exclude>CAPTURE_COUNT</exclude>
                         <exclude>LASER_CAP_CNT</exclude>
-                        <exclude>LASER_CORR</exclude>
                     </exclusions>
                 </option>
             </options>

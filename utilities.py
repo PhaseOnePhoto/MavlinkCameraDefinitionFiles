@@ -28,6 +28,17 @@ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 from xml.etree import ElementTree
 
 
+def prune_exclusions(template : ElementTree.ElementTree):
+    parameter_elements = template.findall('./parameters/*')
+    parameter_names = [parameter_element.attrib['name'] for parameter_element in parameter_elements]
+    
+    exclusions_elements = template.findall('./parameters/parameter/options/option/exclusions')
+
+    for exclusions_element in exclusions_elements:
+        for exclude in exclusions_element:
+            if exclude.text not in parameter_names:
+                exclusions_element.remove(exclude)
+
 def get_template(filename : str):
     return ElementTree.parse(filename)
 
