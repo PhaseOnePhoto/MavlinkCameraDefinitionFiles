@@ -30,13 +30,13 @@ from utilities import *
 
 
 def main():
-    version = '32'
+    version = '33'
 
     build_ixm_50(version)
     build_ixm_100(version)
     build_ixm_100_achromatic(version)
     build_ixm_gs120(version)
-    build_p5_gs128('32')
+    build_p5_gs128(version)
 
 def build_ixm_50(version='26', model='iXM-50', vendor='PhaseOne'):
     template = get_template('template.xml')
@@ -241,6 +241,8 @@ def build_p5_gs128(version='01', model='P5-GS128', vendor='PhaseOne'):
     remove_option(template, 'CAPTURE_MODE', 'Laser')
     remove_option(template, 'CAPTURE_MODE', 'Timed Laser')
     remove_option(template, 'CAPTURE_MODE', 'Burst Mode')
+
+    remove_parameter(template, 'CAPTURE_COUNT')
     
     remove_parameter(template, 'FOCUS_BKT_MODE')
     remove_parameter(template, 'FOCUS_BKT_CNT')
